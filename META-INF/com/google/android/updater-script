@@ -1,6 +1,7 @@
 #ASSERT
 assert(getprop("ro.product.device") == "chagalllte" || getprop("ro.build.product") == "chagalllte" || getprop("ro.product.name") == "chagalllte" ||
-	abort("This package is for \"chagalllte\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
+	getprop("ro.product.device") == "chagallwifi" || getprop("ro.build.product") == "chagallwifi" || getprop("ro.product.name") == "chagallwifi" ||
+	abort("This package is for \"chagalllte,chagallwifi\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
 unmount("/system");
 show_progress(1.000000, 0);
 ui_print(" ");
@@ -20,6 +21,10 @@ set_progress(0.200000);
 ui_print("Extracting system...");
 ui_print(" ");
 package_extract_dir("system", "/system");
+#DATA
+ui_print("Extracting data..."); ui_print(" ");
+package_extract_dir("data", "/data");
+set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644);
 set_progress(0.500000);
 ui_print("Creating symlinks...");
 ui_print(" ");
@@ -329,9 +334,17 @@ ui_print("Extracting boot image...");
 ui_print(" ");
 package_extract_file("boot.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
 set_progress(0.800000);
+#SUD
+set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 #ROOT
+package_extract_dir("rootzip", "/tmp/rootzip");
+run_program("/sbin/busybox", "unzip", "/tmp/rootzip/SuperSU-v2.78.zip", "META-INF/com/google/android/*", "-d", "/tmp/rootzip");
+run_program("/sbin/busybox", "sh", "/tmp/rootzip/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/rootzip/SuperSU-v2.78.zip");
 ui_print(" ");
 #BUSYBOX
+package_extract_dir("busybox", "/tmp/busybox");
+run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
+run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip");
 set_progress(0.900000);
 unmount("/system");
 set_progress(1.000000);
