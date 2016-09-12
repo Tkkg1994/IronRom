@@ -1,0 +1,7 @@
+key 251   DUMMY_MENU
+key 253   DUMMY_BACK
+key 158   BACK
+key 254   APP_SWITCH
+
+# LEDs
+led 0x08 MISC

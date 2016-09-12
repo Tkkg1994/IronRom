@@ -1,0 +1,11 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<SamsungMobileFeauture>
+  <FeatureSet>
+      <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+      <CscFeature_Launcher_TotalPageCount>5</CscFeature_Launcher_TotalPageCount>
+      <CscFeature_Launcher_DefaultPageNumber>2</CscFeature_Launcher_DefaultPageNumber>
+      <CscFeature_Setting_CustNetworkSelMenu4>NUMERIC</CscFeature_Setting_CustNetworkSelMenu4>
+      <CscFeature_LockScreen_ConfigClockDisplayPolicy>IgnoreNationalRoamingWithoutMNC</CscFeature_LockScreen_ConfigClockDisplayPolicy>
+      <CscFeature_VoiceCall_LogListViewConfig>vvm</CscFeature_VoiceCall_LogListViewConfig>
+  </FeatureSet>
+</SamsungMobileFeauture>

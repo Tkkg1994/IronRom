@@ -1,0 +1,2 @@
+/hidden/app/cewe-stub.apk
+/hidden/app/MyGalaxy-STUB-release.apk
