@@ -1,0 +1,2 @@
+assert(getprop("ro.product.device") == "chagalllte" || getprop("ro.build.product") == "chagalllte" || getprop("ro.product.name") == "chagalllte" ||
+	abort("This package is for \"chagalllte\" devices; this is a \"" + getprop("ro.product.device") + "\"."););

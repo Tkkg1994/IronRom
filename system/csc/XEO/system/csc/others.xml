@@ -1,7 +1,0 @@
-<?xml  version="1.0" encoding="UTF-8" ?>
-<SamsungMobileFeauture>
-  <FeatureSet>
-      <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>      <CscFeature_RIL_EnableLaunchBrowser>TRUE</CscFeature_RIL_EnableLaunchBrowser>      <CscFeature_RIL_ConfigAlwaysOnApn>mms_26003</CscFeature_RIL_ConfigAlwaysOnApn>      <CscFeature_Common_Beep4NotiDuringCall>TRUE</CscFeature_Common_Beep4NotiDuringCall>      <CscFeature_VoiceCall_LogListViewConfig>vvm</CscFeature_VoiceCall_LogListViewConfig>
-      <CscFeature_VoiceCall_ConfigOpStyleForRoaming>nationalroamingmodemenuplay</CscFeature_VoiceCall_ConfigOpStyleForRoaming>
-  </FeatureSet>
-</SamsungMobileFeauture>

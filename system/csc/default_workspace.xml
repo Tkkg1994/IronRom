@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+
+-->
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.sec.android.app.launcher" >
+
+    <home>
+
+        <!-- screen [0] -->
+        <!-- Magazine Widget SPlanner -->
+        <magazinewidget
+            launcher:packageName="com.sec.android.widgetapp.SPlannerAppWidget" 
+            launcher:className="com.sec.android.widgetapp.SPlannerAppWidget.MagazineWidget.MagazineAppWidgetProvider" 
+            launcher:screen="0" 
+            launcher:x="0" 
+            launcher:y="0" 
+            launcher:spanX="4" 
+            launcher:spanY="2" />
+
+
+        <!-- Magazine Widget Email -->
+        <magazinewidget
+            launcher:packageName="com.android.email" 
+            launcher:className="com.android.email.provider.WidgetProvider" 
+            launcher:screen="0" 
+            launcher:x="4" 
+            launcher:y="0" 
+            launcher:spanX="2" 
+            launcher:spanY="4" />
+
+
+        <!-- Hancome Office Magazine widget -->
+        <magazinewidget
+            launcher:packageName="com.hancom.androidpc.appwidget" 
+            launcher:className="com.hancom.androidpc.appwidget.RecentDocsMagazineWidgetProvider" 
+            launcher:screen="0" 
+            launcher:x="0" 
+            launcher:y="2" 
+            launcher:spanX="4" 
+            launcher:spanY="2" />
+
+
+        <!--  screen [1]  -->
+        <!-- Briefing Widget -->
+        <magazinewidget
+            launcher:packageName="com.sec.android.widgetapp.briefing" 
+            launcher:className="com.sec.android.widgetapp.briefing.Briefing"
+            launcher:screen="1" 
+            launcher:x="0" 
+            launcher:y="0" 
+            launcher:spanX="2" 
+            launcher:spanY="4" />
+
+
+        <!-- Magazine widget Arts and culture -->
+        <magazinewidget
+            launcher:packageName="com.sec.android.magazinewidget" 
+            launcher:className="com.sec.android.magazinewidget.receiver.news.MagazineWidgetReceiverMovie"
+            launcher:screen="1" 
+            launcher:x="2" 
+            launcher:y="0" 
+            launcher:spanX="2" 
+            launcher:spanY="2" />
+
+
+        <!-- Magazine widget Sports  -->
+        <magazinewidget
+            launcher:packageName="com.sec.android.magazinewidget" 
+            launcher:className="com.sec.android.magazinewidget.receiver.news.MagazineWidgetReceiverSports"
+            launcher:screen="1" 
+            launcher:x="4" 
+            launcher:y="0" 
+            launcher:spanX="2" 
+            launcher:spanY="2" />
+			
+
+        <!-- Magazine widget News -->
+        <magazinewidget
+            launcher:packageName="com.sec.android.magazinewidget" 
+            launcher:className="com.sec.android.magazinewidget.receiver.news.MagazineWidgetReceiverNews" 
+            launcher:screen="1" 
+            launcher:x="2" 
+            launcher:y="2" 
+            launcher:spanX="2" 
+            launcher:spanY="2" />
+
+
+        <!-- Magazine Widget Samsung WatchON / If not, Photography Magazine Widget -->
+        <magazinewidget
+            launcher:packageName="com.sec.yosemite.tab" 
+            launcher:className="com.sec.msc.android.yosemite.ui.common.appwidget.MagazineWidget" 
+            launcher:packageName_replacement="com.sec.android.magazinewidget"
+            launcher:className_replacement="com.sec.android.magazinewidget.receiver.news.MagazineWidgetReceiverPhotography"
+            launcher:screen="1" 
+            launcher:x="4" 
+            launcher:y="2" 
+            launcher:spanX="2" 
+            launcher:spanY="2" />
+
+
+        <!--  screen [2]  -->
+        <!-- .WeatherClock -->
+        <appwidget
+            launcher:packageName="com.sec.android.widgetapp.at.hero.accuweather" 
+            launcher:className="com.sec.android.widgetapp.at.hero.accuweather.WeatherClock" 
+            launcher:screen="2" 
+            launcher:x="0" 
+            launcher:y="0" 
+            launcher:spanX="4" 
+            launcher:spanY="3" />
+			
+
+        <!-- VideoWidget -->
+        <appwidget
+            launcher:packageName="com.sec.android.app.videoplayer" 
+            launcher:className="com.sec.android.app.videoplayer.appwidget.VideoWidget" 
+            launcher:screen="2" 
+            launcher:x="4" 
+            launcher:y="0" 
+            launcher:spanX="4" 
+            launcher:spanY="3" />
+
+        <!-- GoogleSearchWidget -->
+        <appwidget
+            launcher:packageName="com.google.android.googlequicksearchbox"
+            launcher:className="com.google.android.googlequicksearchbox.SearchWidgetProvider"
+            launcher:screen="2"
+            launcher:x="0"
+            launcher:y="3"
+            launcher:spanX="4"
+            launcher:spanY="1"/>
+
+
+        <!-- Folder : Google -->
+        <folder
+            launcher:screen="2" 
+            launcher:title="Google" 
+            launcher:x="0" 
+            launcher:y="5" >
+            <favorite
+                launcher:screen="0" 
+                launcher:packageName="com.google.android.gm" 
+                launcher:className="com.google.android.gm.ConversationListActivityGmail" />
+            <favorite
+                launcher:screen="1" 
+                launcher:packageName="com.google.android.apps.plus" 
+                launcher:className="com.google.android.apps.plus.phone.HomeActivity" />
+            <favorite
+                launcher:screen="2" 
+                launcher:packageName="com.google.android.apps.maps" 
+                launcher:className="com.google.android.maps.MapsActivity" />
+            <!--  <favorite
+                launcher:screen="3" 
+                launcher:packageName="com.google.android.music" 
+                launcher:className="com.android.music.activitymanagement.TopLevelActivity" />-->
+            <favorite
+                launcher:screen="4" 
+                launcher:packageName="com.google.android.videos" 
+                launcher:className="com.google.android.youtube.videos.EntryPoint" />
+            <favorite
+                launcher:screen="5" 
+                launcher:packageName="com.google.android.apps.books" 
+                launcher:className="com.google.android.apps.books.app.BooksActivity" />
+            <favorite
+                launcher:screen="6" 
+                launcher:packageName="com.google.android.apps.magazines" 
+                launcher:className="com.google.apps.dots.android.app.activity.CurrentsStartActivity" />
+            <favorite
+                launcher:screen="7" 
+                launcher:packageName="com.google.android.play.games" 
+                launcher:className="com.google.android.gms.games.ui.destination.main.MainActivity" />
+            <favorite
+                launcher:screen="8" 
+                launcher:packageName="com.google.android.apps.docs" 
+                launcher:className="com.google.android.apps.docs.app.NewMainProxyActivity" />
+            <favorite
+                launcher:screen="9" 
+                launcher:packageName="com.google.android.youtube" 
+                launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity" />
+            <favorite
+                launcher:screen="10" 
+                launcher:packageName="com.google.android.apps.plus" 
+                launcher:className="com.google.android.apps.plus.phone.ConversationListActivity" />
+            <!--Photos-->
+            <favorite 
+                launcher:packageName="com.google.android.apps.plus" 
+                launcher:className="com.google.android.apps.plus.phone.PhotosLegacyLauncherActivity" 
+                launcher:screen="10" />
+            <favorite
+                launcher:packageName="com.google.android.apps.photos"
+                launcher:className="com.google.android.apps.photos.home.HomeActivity"
+                launcher:screen="10" />
+            <!--Hangouts-->
+            <favorite
+                launcher:screen="11" 
+                launcher:packageName="com.google.android.talk" 
+                launcher:className="com.google.android.talk.SigningInActivity" />
+        </folder> 
+
+		
+        <!-- Chrome -->
+        <favorite
+            launcher:packageName="com.android.chrome" 
+            launcher:className="com.google.android.apps.chrome.Main" 
+            launcher:screen="2" 
+            launcher:x="1" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Play Store -->
+        <favorite
+            launcher:packageName="com.android.vending" 
+            launcher:className="com.android.vending.AssetBrowserActivity" 
+            launcher:screen="2" 
+            launcher:x="2" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Phone -->
+        <favorite
+            launcher:packageName="com.android.contacts" 
+            launcher:className="com.android.contacts.activities.DialtactsActivity" 
+            launcher:className_sub="com.android.contacts.activities.PeopleActivity" 
+            launcher:screen="2" 
+            launcher:x="3" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Messages -->
+        <favorite
+            launcher:packageName="com.android.mms" 
+            launcher:className="com.android.mms.ui.ConversationComposer" 
+            launcher:packageName_sub="com.sec.android.app.camera"
+            launcher:className_sub="com.sec.android.app.camera.Camera"
+            launcher:screen="2" 
+            launcher:x="4" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Internet -->
+        <favorite
+            launcher:packageName="com.sec.android.app.sbrowser" 
+            launcher:className="com.sec.android.app.sbrowser.SBrowserMainActivity" 
+            launcher:screen="2" 
+            launcher:x="5" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Gallery -->
+        <favorite
+            launcher:packageName="com.sec.android.gallery3d" 
+            launcher:className="com.sec.android.gallery3d.app.GalleryActivity" 
+            launcher:screen="2" 
+            launcher:x="6" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Settings -->
+        <favorite
+            launcher:packageName="com.android.settings" 
+            launcher:className="com.android.settings.Settings" 
+            launcher:screen="2" 
+            launcher:x="7" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!--  screen [3]  -->
+        <!--  -->
+        <appwidget
+            launcher:packageName="com.android.vending" 
+            launcher:className="com.google.android.finsky.widget.consumption.NowPlayingWidgetProvider" 
+            launcher:screen="3" 
+            launcher:x="0" 
+            launcher:y="0" 
+            launcher:spanX="4" 
+            launcher:spanY="3" >
+            <extra
+                launcher:key="type"
+                launcher:value="all" />
+        </appwidget>
+
+
+        <!-- .WidgetProvider43 -->
+        <appwidget
+            launcher:packageName="com.sec.android.widgetapp.samsungapps" 
+            launcher:className="com.sec.android.widgetapp.samsungapps.WidgetProvider43" 
+            launcher:screen="3" 
+            launcher:x="4" 
+            launcher:y="0" 
+            launcher:spanX="4" 
+            launcher:spanY="3" />
+		<!-- Play Music -->
+        <favorite
+            launcher:packageName="com.google.android.music" 
+            launcher:className="com.android.music.activitymanagement.TopLevelActivity" 
+            launcher:screen="3" 
+            launcher:x="1" 
+            launcher:y="4" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+  
+        <!-- WebEx -->
+        <favorite
+            launcher:packageName="com.cisco.webex.meetings" 
+            launcher:className="com.cisco.webex.meetings.ui.premeeting.welcome.WebExMeeting" 
+            launcher:screen="3" 
+            launcher:x="0" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Remote PC -->
+        <favorite
+            launcher:packageName="RemotePC.AndroidViewer.samsung" 
+            launcher:className="rsupport.AndroidViewer.Welcome.WelcomeActivity" 
+            launcher:screen="3" 
+            launcher:x="1" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Hancom Viewer -->
+        <favorite
+            launcher:packageName="com.hancom.androidpc.viewer.launcher" 
+            launcher:className="com.hancom.androidpc.launcher.HViewerLauncher" 
+            launcher:screen="3" 
+            launcher:x="2" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- SideSync 3.0 -->
+        <favorite
+            launcher:packageName="com.sec.android.sidesync30" 
+            launcher:className="com.sec.android.sidesync30.ui.SideSyncActivity" 
+            launcher:screen="3" 
+            launcher:x="3" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Video -->
+        <favorite
+            launcher:packageName="com.samsung.everglades.video" 
+            launcher:className="com.samsung.everglades.video.VideoMain" 
+            launcher:screen="3" 
+            launcher:x="4" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Music -->
+        <favorite
+            launcher:packageName="com.sec.android.app.music" 
+            launcher:className="com.samsung.musicplus.MusicMainActivity" 
+            launcher:screen="3" 
+            launcher:x="5" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Dropbox -->
+        <favorite
+            launcher:packageName="com.dropbox.android" 
+            launcher:className="com.dropbox.android.activity.DropboxBrowser" 
+            launcher:screen="3" 
+            launcher:x="6" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+            
+            
+        <!-- Kids Widget -->
+        <appwidget
+            launcher:packageName="com.sec.kidsplat.installer" 
+            launcher:className="com.sec.kidsplat.installer.KidsModeInstallerWidget" 
+            launcher:packageName_replacement="next"
+            launcher:screen="3" 
+            launcher:x="7" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+
+        <!-- Help. For a sub-user mode -->
+        <favorite
+            launcher:packageName_sub="com.samsung.helphub" 
+            launcher:className_sub="com.samsung.helphub.HelpHubActivity" 
+            launcher:screen="3" 
+            launcher:x="7" 
+            launcher:y="5" 
+            launcher:spanX="1" 
+            launcher:spanY="1" />
+
+    </home> 
+
+</favorites> 

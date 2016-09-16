@@ -1,12 +1,0 @@
-<?xml  version="1.0" encoding="UTF-8" ?>
-<SamsungMobileFeauture>
-  <Version>ED0001</Version>
-  <Country>GERMANY</Country>
-  <CountryISO>DE</CountryISO>
-  <SalesCode>DBT</SalesCode>
-  <FeatureSet>
-    <CscFeature_GMS_ReplaceGMailBrandForGermany>true</CscFeature_GMS_ReplaceGMailBrandForGermany>
-    <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
-    <CscFeature_RIL_EnableLaunchBrowser>TRUE</CscFeature_RIL_EnableLaunchBrowser>    <CscFeature_Common_Beep4NotiDuringCall>TRUE</CscFeature_Common_Beep4NotiDuringCall>    <CscFeature_VoiceCall_LogListViewConfig>vvm</CscFeature_VoiceCall_LogListViewConfig>
-  </FeatureSet>
-</SamsungMobileFeauture>

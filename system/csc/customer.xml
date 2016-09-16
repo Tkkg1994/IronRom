@@ -2,26 +2,102 @@
 <CustomerData>
   <GeneralInfo>
     <CSCEdition>ED0001</CSCEdition>
-    <Country>Germany</Country>
-    <CountryISO>DE</CountryISO>
-    <Region>EUR</Region>
-    <SalesCode>DBT</SalesCode>
-    <NbNetworkInfo>4</NbNetworkInfo>
+    <Country>PANAMA</Country>
+    <CountryISO>PA</CountryISO>
+    <Region>LA</Region>
+    <SalesCode>TPA</SalesCode>
+    <NbNetworkInfo>23</NbNetworkInfo>
     <NetworkInfo>
-      <MCCMNC>26201</MCCMNC>
-      <NetworkName>Telekom.de</NetworkName>
+      <MCCMNC>71201</MCCMNC>
+      <NetworkName>TPA_PA</NetworkName>
     </NetworkInfo>
     <NetworkInfo>
-      <MCCMNC>26202</MCCMNC>
-      <NetworkName>Vodafone.de</NetworkName>
+      <MCCMNC>71202</MCCMNC>
+      <NetworkName>TPA_PA</NetworkName>
     </NetworkInfo>
     <NetworkInfo>
-      <MCCMNC>26203</MCCMNC>
-      <NetworkName>E-Plus</NetworkName>
+      <MCCMNC>71401</MCCMNC>
+      <NetworkName>PCW_PA</NetworkName>
     </NetworkInfo>
     <NetworkInfo>
-      <MCCMNC>26207</MCCMNC>
-      <NetworkName>o2 - de</NetworkName>
+      <MCCMNC>714020</MCCMNC>
+      <NetworkName>movistar_PA</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>71403</MCCMNC>
+      <NetworkName>Claro_PA</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>71404</MCCMNC>
+      <NetworkName>Digicel</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>70401</MCCMNC>
+      <NetworkName>Claro_GT</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>70403</MCCMNC>
+      <NetworkName>movistar_GT</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>704030</MCCMNC>
+      <NetworkName>movistar_GT</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>70402</MCCMNC>
+      <NetworkName>TIGO_CGU</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>70604</MCCMNC>
+      <NetworkName>movistar_SV</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>706040</MCCMNC>
+      <NetworkName>movistar_SV</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>70601</MCCMNC>
+      <NetworkName>Claro_SV</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>70603</MCCMNC>
+      <NetworkName>TIGO_ETE</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>71204</MCCMNC>
+      <NetworkName>movistar_CR</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>71203</MCCMNC>
+      <NetworkName>Claro_CR</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>712030</MCCMNC>
+      <NetworkName>Claro_CR</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>70802</MCCMNC>
+      <NetworkName>TIGO_CTE</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>708020</MCCMNC>
+      <NetworkName>TIGO_CTE</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>708001</MCCMNC>
+      <NetworkName>Claro_HN</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>710300</MCCMNC>
+      <NetworkName>movistar_NI</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>71021</MCCMNC>
+      <NetworkName>Claro_NI_NEN</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>710730</MCCMNC>
+      <NetworkName>Claro_NI_NEN</NetworkName>
     </NetworkInfo>
   </GeneralInfo>
   <Settings>
@@ -30,150 +106,45 @@
         <OneSIMLock>none</OneSIMLock>
       </Security>
       <Network>
+        <NbFastDormancy>2</NbFastDormancy>
+        <FastDormancy>
+          <NetworkName>TPA_PA</NetworkName>
+          <FastDormancyEnableStatus>on</FastDormancyEnableStatus>
+          <TimeoutValue>5</TimeoutValue>
+          <LCDStatus>on</LCDStatus>
+        </FastDormancy>
+        <FastDormancy>
+          <NetworkName>TPA_PA</NetworkName>
+          <FastDormancyEnableStatus>on</FastDormancyEnableStatus>
+          <TimeoutValue>5</TimeoutValue>
+          <LCDStatus>off</LCDStatus>
+        </FastDormancy>
         <NbWbAmr>1</NbWbAmr>
         <WbAmr>
           <NetworkName>default</NetworkName>
-          <WbAmrCodec>on</WbAmrCodec>
+          <WbAmrCodec>off</WbAmrCodec>
         </WbAmr>
         <NbSOSNumber>2</NbSOSNumber>
-        <SOSNumber>112</SOSNumber>
         <SOSNumber>911</SOSNumber>
-        <AutoProfile>on</AutoProfile>
-        <AutoVoicemail>off</AutoVoicemail>
-        <AutoEmailAccount>off</AutoEmailAccount>
-        <AutoBookmark>off</AutoBookmark>
-        <AutoLink>off</AutoLink>
-        <AutoSyncML>off</AutoSyncML>
-        <AutoFastDormancy>off</AutoFastDormancy>
-        <AutoWbAmr>off</AutoWbAmr>
-        <AutoFOTA>off</AutoFOTA>
+        <SOSNumber>112</SOSNumber>
       </Network>
-      <Sound>
-        <TouchTone>on</TouchTone>
-        <ExtraSound>
-          <ConnectTone>off</ConnectTone>
-        </ExtraSound>
-        <AMRVoiceCodec>off</AMRVoiceCodec>
-      </Sound>
       <Phone>
-        <DefLanguage>de_DE</DefLanguage>
-        <DefLanguageNoSIM>de_DE</DefLanguageNoSIM>
-        <T9Enabling>enable</T9Enabling>
-        <T9Language>german</T9Language>
-        <AutoRedial>off</AutoRedial>
+        <DefLanguage>spanish_latin</DefLanguage>
+        <DefLanguageNoSIM>spanish_latin</DefLanguageNoSIM>
+        <T9Enabling>disable</T9Enabling>
         <DateTimeFormat>
-          <TimeFormat>24h</TimeFormat>
+          <DateFormat>ddmmyyyy</DateFormat>
+          <TimeFormat>12h</TimeFormat>
         </DateTimeFormat>
       </Phone>
     </Main>
     <Messages>
       <SMS>
-        <DeliveryReport>off</DeliveryReport>
-        <MsgTypeThreshold>
-          <ThresholdValue>5</ThresholdValue>
-          <ThresholdType>pagecount</ThresholdType>
-        </MsgTypeThreshold>
-        <CharSupport>gsmalpha</CharSupport>
+        <CellBroadcast>on</CellBroadcast>
       </SMS>
-      <MMS>
-        <MmsSending>
-          <ReqDeliveryRep>off</ReqDeliveryRep>
-          <ReqReadRep>off</ReqReadRep>
-          <CreationMode>free</CreationMode>
-        </MmsSending>
-        <MmsReceiving>
-          <Home>auto</Home>
-          <Roaming>manual</Roaming>
-        </MmsReceiving>
-        <NbMMSView>1</NbMMSView>
-        <MMSView>
-          <MessageUserAgent>SAMSUNG-ANDROID-MMS/uaprof</MessageUserAgent>
-          <MessageUaProfUrl>http://wap.samsungmobile.com/uaprof/uaprof.rdf</MessageUaProfUrl>
-        </MMSView>
-      </MMS>
-      <Email>
-        <NbAccount>4</NbAccount>
-        <Account>
-          <NetworkName>default</NetworkName>
-          <AccountName>1 &amp; 1 Mail</AccountName>
-          <EmailAddr>@1und1.de</EmailAddr>
-          <LoginType>domain_type</LoginType>
-          <Incoming>
-            <MailboxType>pop3</MailboxType>
-            <ServAddr>pop.1und1.de</ServAddr>
-            <Port>995</Port>
-            <Secure>ssl+trustallcerts</Secure>
-          </Incoming>
-          <Outgoing>
-            <ServAddr>smtp.1und1.de</ServAddr>
-            <Port>587</Port>
-            <SmtpAuth>on</SmtpAuth>
-            <Secure>tls+trustallcerts</Secure>
-          </Outgoing>
-        </Account>
-        <Account>
-          <NetworkName>default</NetworkName>
-          <AccountName>GMX</AccountName>
-          <EmailAddr>@gmx.de</EmailAddr>
-          <LoginType>domain_type</LoginType>
-          <Incoming>
-            <MailboxType>pop3</MailboxType>
-            <ServAddr>pop.gmx.net</ServAddr>
-            <Port>995</Port>
-            <Secure>ssl+trustallcerts</Secure>
-          </Incoming>
-          <Outgoing>
-            <ServAddr>mail.gmx.net</ServAddr>
-            <Port>587</Port>
-            <SmtpAuth>on</SmtpAuth>
-            <Secure>tls+trustallcerts</Secure>
-          </Outgoing>
-        </Account>
-        <Account>
-          <NetworkName>default</NetworkName>
-          <AccountName>Google Mail</AccountName>
-          <EmailAddr>@gmail.com</EmailAddr>
-          <Incoming>
-            <MailboxType>imap4</MailboxType>
-            <ServAddr>imap.gmail.com</ServAddr>
-            <Port>993</Port>
-            <Secure>ssl+trustallcerts</Secure>
-          </Incoming>
-          <Outgoing>
-            <ServAddr>smtp.gmail.com</ServAddr>
-            <Port>465</Port>
-            <SmtpAuth>on</SmtpAuth>
-            <Secure>ssl+trustallcerts</Secure>
-          </Outgoing>
-        </Account>
-        <Account>
-          <NetworkName>default</NetworkName>
-          <AccountName>WEB.DE</AccountName>
-          <EmailAddr>@web.de</EmailAddr>
-          <LoginType>domain_type</LoginType>
-          <Incoming>
-            <MailboxType>pop3</MailboxType>
-            <ServAddr>pop3.web.de</ServAddr>
-            <Port>995</Port>
-            <Secure>ssl+trustallcerts</Secure>
-          </Incoming>
-          <Outgoing>
-            <ServAddr>smtp.web.de</ServAddr>
-            <Port>587</Port>
-            <SmtpAuth>on</SmtpAuth>
-            <Secure>tls+trustallcerts</Secure>
-          </Outgoing>
-        </Account>
-      </Email>
     </Messages>
     <Browser>
-      <NbBookmark>2</NbBookmark>
-      <Bookmark>
-        <NetworkName>default</NetworkName>
-        <Editable>no</Editable>
-        <BookmarkName>Samsung Home</BookmarkName>
-        <URL>http://mobileinfo.samsung.de</URL>
-      </Bookmark>
+      <NbBookmark>1</NbBookmark>
       <Bookmark>
         <NetworkName>default</NetworkName>
         <Editable>yes</Editable>
@@ -185,173 +156,596 @@
       </eManual>
     </Browser>
     <Connections>
-      <NbProfileHandle>4</NbProfileHandle>
+      <NbProfileHandle>17</NbProfileHandle>
       <ProfileHandle>
         <NbNetProfile>2</NbNetProfile>
-        <NetworkName>Telekom.de</NetworkName>
-        <ProfBrowser>Telekom Internet</ProfBrowser>
-        <ProfMMS>Telekom MMS</ProfMMS>
-        <ProfEmail>Telekom Internet</ProfEmail>
-        <ProfStreaming>Telekom Internet</ProfStreaming>
+        <NetworkName>TPA_PA</NetworkName>
+        <ProfBrowser>Internet</ProfBrowser>
+        <ProfMMS>MMS</ProfMMS>
       </ProfileHandle>
       <ProfileHandle>
         <NbNetProfile>2</NbNetProfile>
-        <NetworkName>Vodafone.de</NetworkName>
-        <ProfBrowser>Vodafone Internet</ProfBrowser>
-        <ProfMMS>Vodafone MMS</ProfMMS>
-        <ProfEmail>Vodafone Internet</ProfEmail>
+        <NetworkName>PCW_PA</NetworkName>
+        <ProfBrowser>Wap</ProfBrowser>
+        <ProfMMS>Mms</ProfMMS>
       </ProfileHandle>
       <ProfileHandle>
         <NbNetProfile>2</NbNetProfile>
-        <NetworkName>E-Plus</NetworkName>
-        <ProfBrowser>E-Plus Internet</ProfBrowser>
-        <ProfMMS>E-Plus MMS</ProfMMS>
-        <ProfEmail>E-Plus Internet</ProfEmail>
+        <NetworkName>movistar_PA</NetworkName>
+        <ProfBrowser>Movistar INTERNET</ProfBrowser>
+        <ProfMMS>Movistar MMS</ProfMMS>
       </ProfileHandle>
       <ProfileHandle>
         <NbNetProfile>2</NbNetProfile>
-        <NetworkName>o2 - de</NetworkName>
-        <ProfBrowser>o2 Internet</ProfBrowser>
-        <ProfMMS>o2 MMS</ProfMMS>
-        <ProfEmail>o2 Internet</ProfEmail>
+        <NetworkName>Claro_PA</NetworkName>
+        <ProfBrowser>WEB Claro</ProfBrowser>
+        <ProfMMS>MMS Claro</ProfMMS>
       </ProfileHandle>
-      <NbProfile>8</NbProfile>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>Digicel</NetworkName>
+        <ProfBrowser>Web Digicel</ProfBrowser>
+        <ProfMMS>MMS Digicel</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>Claro_GT</NetworkName>
+        <ProfBrowser>INTERNET CLARO</ProfBrowser>
+        <ProfMMS>MMS CLARO</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>movistar_GT</NetworkName>
+        <ProfBrowser>Movistar INTERNET</ProfBrowser>
+        <ProfMMS>Movistar MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>TIGO_CGU</NetworkName>
+        <ProfBrowser>BROADBAND TIGO GT</ProfBrowser>
+        <ProfMMS>MMS TIGO GT</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>movistar_SV</NetworkName>
+        <ProfBrowser>Movistar INTERNET</ProfBrowser>
+        <ProfMMS>Movistar MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>Claro_SV</NetworkName>
+        <ProfBrowser>INTERNET CLARO</ProfBrowser>
+        <ProfMMS>MMS CLARO</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>TIGO_ETE</NetworkName>
+        <ProfBrowser>INTERNET TIGO</ProfBrowser>
+        <ProfMMS>MMS TIGO</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>movistar_CR</NetworkName>
+        <ProfBrowser>Movistar INTERNET</ProfBrowser>
+        <ProfMMS>Movistar MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>Claro_CR</NetworkName>
+        <ProfBrowser>INTERNET CLARO</ProfBrowser>
+        <ProfMMS>MMS CLARO</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>TIGO_CTE</NetworkName>
+        <ProfBrowser>INTERNET TIGO</ProfBrowser>
+        <ProfMMS>MMS TIGO</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>Claro_HN</NetworkName>
+        <ProfBrowser>Internet Claro</ProfBrowser>
+        <ProfMMS>MMS Claro</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>movistar_NI</NetworkName>
+        <ProfBrowser>Movistar INTERNET</ProfBrowser>
+        <ProfMMS>Movistar MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>Claro_NI_NEN</NetworkName>
+        <ProfBrowser>INTERNET CLARO</ProfBrowser>
+        <ProfMMS>MMS CLARO</ProfMMS>
+      </ProfileHandle>
+      <NbProfile>34</NbProfile>
       <Profile>
-        <NetworkName>Telekom.de</NetworkName>
+        <NetworkName>TPA_PA</NetworkName>
         <Editable>yes</Editable>
-        <ProfileName>Telekom Internet</ProfileName>
-        <URL>http://mobileinfo.samsung.de</URL>
+        <ProfileName>Internet</ProfileName>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
-        <Proxy>
-          <EnableFlag>off</EnableFlag>
-        </Proxy>
         <PSparam>
-          <APN>internet.telekom</APN>
-          <UserId>telekom</UserId>
-          <Password>telekom</Password>
+          <APN>kolbi3g</APN>
         </PSparam>
       </Profile>
       <Profile>
-        <NetworkName>Telekom.de</NetworkName>
+        <NetworkName>TPA_PA</NetworkName>
         <Editable>yes</Editable>
-        <ProfileName>Telekom MMS</ProfileName>
-        <URL>http://mms.t-mobile.de/servlets/mms</URL>
+        <ProfileName>MMS</ProfileName>
+        <URL>http://mmsice</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
         <Proxy>
           <EnableFlag>on</EnableFlag>
-          <ServAddr>109.237.176.193</ServAddr>
-          <Port>8008</Port>
-        </Proxy>
-        <PSparam>
-          <APN>internet.telekom</APN>
-          <UserId>telekom</UserId>
-          <Password>telekom</Password>
-        </PSparam>
-      </Profile>
-      <Profile>
-        <NetworkName>Vodafone.de</NetworkName>
-        <Editable>yes</Editable>
-        <ProfileName>Vodafone Internet</ProfileName>
-        <URL>http://mobileinfo.samsung.de</URL>
-        <Auth>normal</Auth>
-        <Protocol>http</Protocol>
-        <MTUSize>1500</MTUSize>
-        <Proxy>
-          <EnableFlag>off</EnableFlag>
-        </Proxy>
-        <PSparam>
-          <APN>web.vodafone.de</APN>
-        </PSparam>
-      </Profile>
-      <Profile>
-        <NetworkName>Vodafone.de</NetworkName>
-        <Editable>yes</Editable>
-        <ProfileName>Vodafone MMS</ProfileName>
-        <URL>http://139.7.24.1/servlets/mms</URL>
-        <Auth>normal</Auth>
-        <Protocol>http</Protocol>
-        <MTUSize>1500</MTUSize>
-        <Proxy>
-          <EnableFlag>on</EnableFlag>
-          <ServAddr>139.7.29.17</ServAddr>
-          <Port>80</Port>
-        </Proxy>
-        <PSparam>
-          <APN>event.vodafone.de</APN>
-          <UserId>VDF2</UserId>
-          <Password>MMS</Password>
-        </PSparam>
-      </Profile>
-      <Profile>
-        <NetworkName>o2 - de</NetworkName>
-        <Editable>yes</Editable>
-        <ProfileName>o2 MMS</ProfileName>
-        <URL>http://10.81.0.7:8002</URL>
-        <Auth>normal</Auth>
-        <Protocol>http</Protocol>
-        <MTUSize>1500</MTUSize>
-        <Proxy>
-          <EnableFlag>on</EnableFlag>
-          <ServAddr>82.113.100.5</ServAddr>
+          <ServAddr>10.184.202.24</ServAddr>
           <Port>8080</Port>
         </Proxy>
         <PSparam>
-          <APN>internet</APN>
+          <APN>kolbimundo</APN>
         </PSparam>
       </Profile>
       <Profile>
-        <NetworkName>o2 - de</NetworkName>
+        <NetworkName>PCW_PA</NetworkName>
         <Editable>yes</Editable>
-        <ProfileName>o2 Internet</ProfileName>
-        <URL>http://mobileinfo.samsung.de</URL>
+        <ProfileName>Wap</ProfileName>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
-        <Proxy>
-          <EnableFlag>off</EnableFlag>
-        </Proxy>
         <PSparam>
-          <APN>internet</APN>
+          <APN>apn01.cwpanama.com.pa</APN>
         </PSparam>
       </Profile>
       <Profile>
-        <NetworkName>E-Plus</NetworkName>
+        <NetworkName>PCW_PA</NetworkName>
         <Editable>yes</Editable>
-        <ProfileName>E-Plus MMS</ProfileName>
-        <URL>http://mms/eplus/</URL>
+        <ProfileName>Mms</ProfileName>
+        <URL>http://mms.zonamovil.com.pa</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
         <Proxy>
           <EnableFlag>on</EnableFlag>
-          <ServAddr>212.23.97.153</ServAddr>
-          <Port>5080</Port>
+          <ServAddr>172.25.3.5</ServAddr>
+          <Port>8080</Port>
         </Proxy>
         <PSparam>
-          <APN>mms.eplus.de</APN>
-          <UserId>mms</UserId>
-          <Password>eplus</Password>
+          <APN>apn02.cwpanama.com.pa</APN>
         </PSparam>
       </Profile>
       <Profile>
-        <NetworkName>E-Plus</NetworkName>
+        <NetworkName>movistar_PA</NetworkName>
         <Editable>yes</Editable>
-        <ProfileName>E-Plus Internet</ProfileName>
-        <URL>http://mobileinfo.samsung.de</URL>
+        <ProfileName>Movistar INTERNET</ProfileName>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet.movistar.pa</APN>
+          <UserId>movistarpa</UserId>
+          <Password>movistarpa</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_PA</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Movistar MMS</ProfileName>
+        <URL>http://mms.movistar.pa</URL>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.12.21.1</ServAddr>
+          <Port>80</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.movistar.pa</APN>
+          <UserId>movistarpamms</UserId>
+          <Password>movistarpa</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_PA</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>WEB Claro</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>ba.amx</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_PA</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS Claro</ProfileName>
+        <URL>http://www.claro.com.pa/mms/</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
         <Proxy>
-          <EnableFlag>off</EnableFlag>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.240.3.129</ServAddr>
+          <Port>8799</Port>
         </Proxy>
         <PSparam>
-          <APN>internet.eplus.de</APN>
-          <UserId>eplus</UserId>
-          <Password>internet</Password>
+          <APN>mms.claro.com.pa</APN>
+          <UserId>CLAROMMS</UserId>
+          <Password>CLAROMMS</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Digicel</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Web Digicel</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>web.digicelpanama.com</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Digicel</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS Digicel</ProfileName>
+        <URL>http://mmc.digicelpanama.com/servlets/mms</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>172.27.99.99</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>wap.digicelpanama.com</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_GT</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>INTERNET CLARO</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>ba.amx</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_GT</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS CLARO</ProfileName>
+        <URL>http://mms.ideasclaro.com:8002</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>216.230.133.66</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.ideasclaro</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_GT</NetworkName>
+        <ProfileName>Movistar INTERNET</ProfileName>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet.movistar.gt</APN>
+          <UserId>movistargt</UserId>
+          <Password>movistargt</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_GT</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Movistar MMS</ProfileName>
+        <URL>http://mms.movistar.gt</URL>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.12.22.1</ServAddr>
+          <Port>80</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.movistar.gt</APN>
+          <UserId>movistargt</UserId>
+          <Password>movistargt</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TIGO_CGU</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>BROADBAND TIGO GT</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>broadband.tigo.gt</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TIGO_CGU</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS TIGO GT</ProfileName>
+        <URL>http://mms</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.16.17.12</ServAddr>
+          <Port>8888</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.tigo.gt</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_SV</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Movistar INTERNET</ProfileName>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet.movistar.sv</APN>
+          <UserId>movistarsv</UserId>
+          <Password>movistarsv</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_SV</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Movistar MMS</ProfileName>
+        <URL>http://mms.movistar.sv</URL>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.12.20.1</ServAddr>
+          <Port>80</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.movistar.sv</APN>
+          <UserId>movistarsv</UserId>
+          <Password>movistarsv</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_SV</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>INTERNET CLARO</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>ba.amx</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_SV</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS CLARO</ProfileName>
+        <URL>http://mms.ideasclaro.com:8002</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>216.230.133.66</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.ideasclaro</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TIGO_ETE</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>INTERNET TIGO</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet.tigo.sv</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TIGO_ETE</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS TIGO</ProfileName>
+        <URL>http://mms</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.16.17.12</ServAddr>
+          <Port>8888</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.tigo.sv</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_CR</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Movistar INTERNET</ProfileName>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet.movistar.cr</APN>
+          <UserId>movistarcr</UserId>
+          <Password>movistarcr</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_CR</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Movistar MMS</ProfileName>
+        <URL>http://mms.movistar.cr</URL>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.221.79.83</ServAddr>
+          <Port>80</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.movistar.cr</APN>
+          <UserId>movistarcr</UserId>
+          <Password>movistarcr</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_CR</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>INTERNET CLARO</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet.ideasclaro</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_CR</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS CLARO</ProfileName>
+        <URL>http://mms.ideasclaro.com:8002</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>216.230.133.66</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.ideasclaro</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TIGO_CTE</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>INTERNET TIGO</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet.tigo.hn</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TIGO_CTE</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS TIGO</ProfileName>
+        <URL>http://mms</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.16.17.12</ServAddr>
+          <Port>8888</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.tigo.hn</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_HN</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Internet Claro</ProfileName>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>ba.amx</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_HN</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS Claro</ProfileName>
+        <URL>http://10.6.32.27/servlets/mms</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.6.32.2</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.ideasclaro</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_NI</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Movistar INTERNET</ProfileName>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet.movistar.ni</APN>
+          <UserId>movistarni</UserId>
+          <Password>movistarni</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>movistar_NI</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>Movistar MMS</ProfileName>
+        <URL>http://mms.movistar.ni</URL>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.12.23.1</ServAddr>
+          <Port>80</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.movistar.ni</APN>
+          <UserId>movistarni</UserId>
+          <Password>movistarni</Password>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_NI_NEN</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>INTERNET CLARO</ProfileName>
+        <URL>http://www.clarosva.com/ni</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>ba.amx</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Claro_NI_NEN</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>MMS CLARO</ProfileName>
+        <URL>http://10.6.32.27/servlets/mms</URL>
+        <Auth>normal</Auth>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.6.32.2</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms.ideasclaro</APN>
         </PSparam>
       </Profile>
     </Connections>

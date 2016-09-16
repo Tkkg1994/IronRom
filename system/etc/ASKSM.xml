@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<VERSION value="160705"/>
+<VERSION value="160729"/>
 <SETMODE target="all">
     <MODE id="0" name="RIP" set="0" />
     <MODE id="1" name="BBLP" set="1" />
@@ -14,7 +14,7 @@
     <MODE id="10" name="BM6AI" set="1" />
     <MODE id="11" name="AD" set="0" />
     <MODE id="12" name="SLAR" set="1" />
-    <MODE id="13" name="LOG" set="0" />
+    <MODE id="13" name="L" set="0" />
     <MODE id="14" name="FE" set="0" />
     <MODE id="15" name="CHECKSUM" set="7cc944a528f5cc317b0e495e8ae263fd618515c3aedc4a5bad951378e6bd153e" />
 </SETMODE>

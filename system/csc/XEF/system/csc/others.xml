@@ -1,11 +1,0 @@
-﻿<?xml  version="1.0" encoding="UTF-8" ?>
-<SamsungMobileFeauture>
-  <Version>ED002</Version>
-  <Country>FRANCE</Country>
-  <CountryISO>FR</CountryISO>
-  <SalesCode>XEF</SalesCode>
-  <FeatureSet>	<CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
-    <CscFeature_Framework_EnableScrCaptureSoundOnlyInCamera>FALSE</CscFeature_Framework_EnableScrCaptureSoundOnlyInCamera>
-	<CscFeature_Message_MmsModeCaptureVideoMaxSize>609280</CscFeature_Message_MmsModeCaptureVideoMaxSize>    <CscFeature_RIL_EnableLaunchBrowser>TRUE</CscFeature_RIL_EnableLaunchBrowser>    <CscFeature_VoiceCall_LogListViewConfig>vvm</CscFeature_VoiceCall_LogListViewConfig>
-  </FeatureSet>
-</SamsungMobileFeauture>

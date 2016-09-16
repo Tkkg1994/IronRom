@@ -12,15 +12,15 @@
 /system/app/Drive/Drive.apk
 /system/app/Music2/Music2.apk
 /system/app/YouTube/YouTube.apk
+/system/app/Gmail2/Gmail2.apk
 /system/app/KnoxSetupWizardClient/KnoxSetupWizardClient.apk
 /system/app/PlayGames/PlayGames.apk
 /system/app/Newsstand/Newsstand.apk
-/system/app/Gmail2/Gmail2.apk
 /system/app/DictDiotek/DictDiotek.apk
 /system/app/SamsungIME/SamsungIME.apk
-/system/app/Videos/Videos.apk
 /system/app/Books/Books.apk
 /system/app/SPlanner_M_Tablet_OS_UPG/SPlanner_M_Tablet_OS_UPG.apk
+/system/app/Videos/Videos.apk
 /system/app/Flipboard/Flipboard.apk
 /system/app/NYTimes/NYTimes.apk
 /system/app/KidsHome3/KidsHome3.apk

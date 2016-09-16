@@ -4,13 +4,9 @@
 	<PublicName>SM-T805</PublicName>
 	</MobileData>
 	<CustomerDataSet>
-	<CSCName>T805OXA</CSCName>
-	<CSCVersion>1CPH6</CSCVersion>
-	<NbCustomer>5</NbCustomer>
-	<CustomerData src="/Customer/BTU/customer.xml" />
-	<CustomerData src="/Customer/DBT/customer.xml" />
-	<CustomerData src="/Customer/ITV/customer.xml" />
-	<CustomerData src="/Customer/XEO/customer.xml" />
-	<CustomerData src="/Customer/XEF/customer.xml" />
+	<CSCName>T805TPA</CSCName>
+	<CSCVersion>1CPHE</CSCVersion>
+	<NbCustomer>1</NbCustomer>
+	<CustomerData src="/Customer/TPA/customer.xml" />
 	</CustomerDataSet>
 </SW-Configuration>
