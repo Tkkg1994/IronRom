@@ -1,6 +1,7 @@
 #ASSERT
 assert(getprop("ro.product.device") == "chagalllte" || getprop("ro.build.product") == "chagalllte" || getprop("ro.product.name") == "chagalllte" ||
-	abort("This package is for \"chagalllte\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
+	getprop("ro.product.device") == "chagallwifi" || getprop("ro.build.product") == "chagallwifi" || getprop("ro.product.name") == "chagallwifi" ||
+	abort("This package is for \"chagalllte,chagallwifi\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
 unmount("/system");
 show_progress(1.000000, 0);
 ui_print(" ");

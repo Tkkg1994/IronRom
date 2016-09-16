@@ -17,3 +17,18 @@ Everything is Ok
 Files: 91
 Size:       58257016
 Compressed: 44348403
+
+7-Zip [32] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,32 bits,8 CPUs Intel(R) Core(TM) i7-3632QM CPU @ 2.20GHz (306A9),ASM,AES-NI)
+
+Scanning the drive:
+5 folders, 4 files, 8605512 bytes (8404 KiB)
+
+Creating archive: IronRom-kernel.zip
+
+Items to compress: 9
+
+
+Files read from disk: 4
+Archive size: 8342440 bytes (8147 KiB)
+Everything is Ok
