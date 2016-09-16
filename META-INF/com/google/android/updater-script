@@ -1,13 +1,17 @@
-#ASSERT
+if
+    file_getprop("/tmp/aroma-data/menu.prop","selected") == "1"
+     then
+		ui_print("Installing IronRom T80X");
+
 assert(getprop("ro.product.device") == "chagalllte" || getprop("ro.build.product") == "chagalllte" || getprop("ro.product.name") == "chagalllte" ||
 	getprop("ro.product.device") == "chagallwifi" || getprop("ro.build.product") == "chagallwifi" || getprop("ro.product.name") == "chagallwifi" ||
 	abort("This package is for \"chagalllte,chagallwifi\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
 unmount("/system");
+unmount("/data");
 show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
-ui_print("IronRom Installer");
-ui_print("Built with SuperR's Kitchen");
+ui_print("IronRom Installer V3.0");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
@@ -15,8 +19,13 @@ ui_print(" ");
 ui_print("Formatting system...");
 ui_print(" ");
 format("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/by-name/SYSTEM", "0", "/system");
+ui_print("Mounting System");
 set_progress(0.100000);
 mount("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/by-name/SYSTEM", "/system");
+ui_print("Mounting Data");
+mount("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/by-name/USERDATA", "/data");
+ui_print("Mounting Cache");
+mount("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/CACHE", "/cache");
 set_progress(0.200000);
 ui_print("Extracting system...");
 ui_print(" ");
@@ -338,6 +347,11 @@ set_progress(0.800000);
 ui_print(" ");
 #BUSYBOX
 set_progress(0.900000);
+ui_print("Umounting Partitions");
 unmount("/system");
+unmount("/cache");
+unmount("/data");
 set_progress(1.000000);
-ui_print("IronRom Installed");
+endif;
+ui_print("IronRom installed");
+ui_print("Please Reboot now");
