@@ -29,6 +29,41 @@ mount("ext4", "EMMC", "/dev/block/mmcblk0p21", "/data");
 ui_print("Mounting Cache");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p19", "/cache");
 set_progress(0.200000);
+#Wipe option
+if
+	file_getprop("/tmp/aroma/wipe.prop","selected.1") == "1"
+	then
+		ui_print("Full wipe...");
+		delete_recursive("/system");
+		delete_recursive("/cache");
+		package_extract_dir("iron/tools", "/tmp/tools"); 
+		set_perm_recursive(0, 0, 0777, 0777, "/tmp/tools");
+		set_perm(0, 0, 0777, "/tmp/Tools/DeleteDataWithoutMedia.sh");
+		run_program("/sbin/busybox", "sh", "/tmp/Tools/DeleteDataWithoutMedia.sh");
+		delete_recursive("/tmp/tools");
+		delete_recursive("/data/dalvik-cache");
+		set_progress(0.300000);
+endif;
+	
+if
+	file_getprop("/tmp/aroma/wipe.prop","selected.1") == "2"
+	then
+		ui_print("Clean install...");
+		delete_recursive("/system");
+		delete_recursive("/data");
+		delete_recursive("/sdcard");
+		delete_recursive("/cache");
+		delete_recursive("/data/dalvik-cache");
+		set_progress(0.300000);
+endif;
+
+if
+	file_getprop("/tmp/aroma/wipe.prop","selected.1") == "3"
+	then
+		ui_print("Dirty flash...");
+		delete_recursive("/system");
+		set_progress(0.300000);
+endif;
 ui_print("Extracting system...");
 ui_print(" ");
 package_extract_dir("system", "/system");
@@ -45,6 +80,53 @@ if
 	then
 		ui_print("Installing SM-T805 Variant...");
 		package_extract_dir("iron/variants/SM-T805/system", "/system");
+endif;
+#Tab S/S2
+if
+	file_getprop("/tmp/aroma/tabs2.prop","contact") == "t800"
+	then
+		ui_print("Installing Wifi contacts...");
+		package_extract_dir("iron/debloat/Contacts/SM-T800", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","contact") == "t805"
+	then
+		ui_print("Installing LTE contacts...");
+		package_extract_dir("iron/debloat/Contacts/SM-T805", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","contact") == "no"
+	then
+		ui_print("No contacts installed...");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","launcher") == "stock"
+	then
+		ui_print("Installing stock launcher...");
+		package_extract_dir("iron/launcher/Tab_S", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","launcher") == "tabs2"
+	then
+		ui_print("Installing Tab s2 launcher...");
+		package_extract_dir("iron/launcher/Tab_S2", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","weather") == "stock"
+	then
+		ui_print("Installing Tab s2 weather...");
+		package_extract_dir("iron/debloat/Weather/Tab_S", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","weather") == "tabs2"
+	then
+		ui_print("Installing Tab s2 weather...");
+		package_extract_dir("iron/debloat/Weather/Tab_S2", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","weather") == "no"
+	then
+		ui_print("No weather installed...");
 endif;
 #Debloat
 if
@@ -64,18 +146,6 @@ if
 	then
 		ui_print("Installing Calculator...");
 		package_extract_dir("iron/debloat/Calculator", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.4") == "1"
-	then
-		ui_print("Installing Wifi contacts...");
-		package_extract_dir("iron/debloat/Contacts/SM-T800", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.5") == "1"
-	then
-		ui_print("Installing LTE contacts...");
-		package_extract_dir("iron/debloat/Contacts/SM-T805", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/debloat.prop","item.1.6") == "1"
