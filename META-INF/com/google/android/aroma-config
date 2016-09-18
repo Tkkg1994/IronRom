@@ -438,6 +438,14 @@ form(
 	"stock",	"Stock Calendar app",	"",								"select",
 	"tabs2",	"Tab S2 Calendar",	"Installs Tab S2 Calendar Application",				"select",
 	"no",		"Nothing",		"Don't install Calendar at all",				"select",
+	"email",	"Email", 		"",								"group",
+	"stock",	"Stock Email app",	"",								"select",
+	"tabs2",	"Tab S2 Email",		"Installs Tab S2 Calendar Application",				"select",
+	"no",		"Nothing",		"Don't install Email at all",					"select",
+	"files",	"Myfiles", 		"",								"group",
+	"stock",	"Stock Myfiles app",	"",								"select",
+	"tabs2",	"Tab S2 Myfiles",	"Installs Tab S2 Myfiles Application",				"select",
+	"no",		"Nothing",		"Don't install Myfiles at all",					"select",
 );
 
 alert( "Alert", "Removing samsung apps can lead to force closes and not working features!");
@@ -467,11 +475,9 @@ checkbox(
 	"Allshare",		"Allshare Cast by Samsung",						1,	#-- item.1.1
 	"ANT",			"ANT-Hal and Plugins",							1,	#-- item.1.2
 	"Calculator",		"",									1,	#-- item.1.3
-	"Email",		"Samsungs default Mail program",					1,	#-- item.1.6
 	"Galaxy Store",		"Samsungs own Store",							1,	#-- item.1.7
 	"Gallery",		"Samsungs Gallery App",							1,	#-- item.1.8
 	"Kids Mode Installer",	"",									0,	#-- item.1.9
-	"MyFiles",		"Myfiles Application",							1,	#-- item.1.10
 	"Samsung Browser", 	"",									1,	#-- item.1.11
 	"Samsung Music Player",	"",									1,	#-- item.1.12
 	"Samsung Video Player",	"",									1,	#-- item.1.13
