@@ -179,6 +179,23 @@ if
 	then
 		ui_print("No Myfiles installed...");
 endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","clock") == "stock"
+	then
+		ui_print("Installing Tab s clock...");
+		package_extract_dir("iron/debloat/Clock/Tab_S", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","clock") == "tabs2"
+	then
+		ui_print("Installing Tab s2 clock...");
+		package_extract_dir("iron/debloat/Clock/Tab_S2", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","clock") == "no"
+	then
+		ui_print("No Myfiles installed...");
+endif;
 #Debloat
 if
 	file_getprop("/tmp/aroma/debloat.prop","item.1.1") == "1"

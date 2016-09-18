@@ -446,6 +446,10 @@ form(
 	"stock",	"Stock Myfiles app",	"",								"select",
 	"tabs2",	"Tab S2 Myfiles",	"Installs Tab S2 Myfiles Application",				"select",
 	"no",		"Nothing",		"Don't install Myfiles at all",					"select",
+	"clock",	"Clock", 		"",								"group",
+	"stock",	"Stock Clock app",	"",								"select",
+	"tabs2",	"Tab S2 Clock",		"Installs Tab S2 Clock Application",				"select",
+	"no",		"Nothing",		"Don't install Myfiles at all",					"select"
 );
 
 alert( "Alert", "Removing samsung apps can lead to force closes and not working features!");
