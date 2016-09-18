@@ -433,7 +433,11 @@ form(
 	"weather",	"Weather", 		"",								"group",
 	"stock",	"Stock Weather widget",	"",								"select",
 	"tabs2",	"Tab S2 weather",	"Installs Tab S2 weather widget",				"select",
-	"no",		"Nothing",		"Don't install weather widget at all",				"select"
+	"no",		"Nothing",		"Don't install weather widget at all",				"select",
+	"calendar",	"Calendar", 		"",								"group",
+	"stock",	"Stock Calendar app",	"",								"select",
+	"tabs2",	"Tab S2 Calendar",	"Installs Tab S2 Calendar Application",				"select",
+	"no",		"Nothing",		"Don't install Calendar at all",				"select",
 );
 
 alert( "Alert", "Removing samsung apps can lead to force closes and not working features!");
@@ -474,7 +478,6 @@ checkbox(
 	"SideSync",		"",									1,	#-- item.1.14
 	"SmartManager",		"SmartManager app",							1,	#-- item.1.15
 	"SMS Application",	"Only needed for T805",							1,	#-- item.1.16
-	"SPlanner",		"Planner App and Widget",						1,	#-- item.1.17
 	"SVoice",		"Samsung Voice Assistant",						1,	#-- item.1.18
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Books",		"",									0,	#-- item.2.1
