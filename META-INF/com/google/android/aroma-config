@@ -3,8 +3,6 @@
 # You can use one of following values:
 #   "rgba", "abgr", "argb", "bgra"
 
-ini_set("force_colorspace","rgba");
-
 ##
 # Initializing Information
 #
@@ -245,15 +243,12 @@ form(
 
 	"variant",	"Variant",		"",								"group",
 	"t800",		"SM-T800",		"Will install files for wifi model",				"select.selected",
-	"t805",		"SM-T800",		"Will install files for lte model",				"select",
+	"t805",		"SM-T805",		"Will install files for lte model",				"select",
 	"kernel",	"Kernel", 		"",								"group",
 	"stockt800",	"Stock SM-T800",	"Installs stock kernel for wifi model",				"select",
 	"ironstockt800","IronStock SM-T800",	"Installs IronStock for wifi model",				"select.selected",
 	"stockt805",	"Stock SM-T805",	"Installs stock kernel for lte model",				"select",
 	"ironstockt805","IronStock SM-T805",	"Installs IronStock for lte model",				"select"
-
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
 );
 
 ##
@@ -288,8 +283,8 @@ form(
 	"bbn",		"Busybox without magisk",	"Will install busybox without magisk compatibility",	"select",
 	"bby",		"Busybox with magisk","Will install busybox with magisk compatibility",			"select.selected",
 	"no",		"No busybox",	"Nothing will be installed",						"select",
-	"xposed",	"Magisk modules","Choose which magisk modules you want to install",			"group",
-	"yes",		"Xposed",	"Will install xposed V86.5 systemless",					"select.selected",
+	"xposed",	"Xposed",	"",									"group",
+	"yes",		"Xposed",	"Will install xposed V86.5 systemless (ONLY WORKS WITH MAGISK)",	"select.selected",
 	"no",		"No Xposed",	"Nothing will be installed",						"select"
 );
 
@@ -320,21 +315,22 @@ checkbox(
 	"Allshare",		"Allshare Cast by Samsung",						1,	#-- item.1.1
 	"ANT",			"ANT-Hal and Plugins",							1,	#-- item.1.2
 	"Calculator",		"",									1,	#-- item.1.3
-	"Samsung Contacts",	"Contacts application",							1,	#-- item.1.4
-	"Email",		"Samsungs default Mail program",					1,	#-- item.1.5
-	"Galaxy Store",		"Samsungs own Store",							1,	#-- item.1.6
-	"Gallery",		"Samsungs Gallery App",							1,	#-- item.1.7
-	"Kids Mode Installer",	"",									0,	#-- item.1.8
-	"MyFiles",		"Myfiles Application",							1,	#-- item.1.9
-	"Samsung Browser", 	"",									1,	#-- item.1.10
-	"Samsung Music Player",	"",									1,	#-- item.1.11
-	"Samsung Video Player",	"",									1,	#-- item.1.12
-	"SideSync",		"",									1,	#-- item.1.13
-	"SmartManager",		"SmartManager app",							1,	#-- item.1.14
-	"SMS Application",	"",									1,	#-- item.1.15
-	"SPlanner",		"Planner App and Widget",						1,	#-- item.1.16
-	"SVoice",		"Samsung Voice Assistant",						1,	#-- item.1.17
-	"Weather",		"Weather Widget",							1,	#-- item.1.18
+	"Samsung Contacts T800","Contacts application for wifi model",					1,	#-- item.1.4
+	"Samsung Contacts T805","Contacts application for lte model",					0,	#-- item.1.5
+	"Email",		"Samsungs default Mail program",					1,	#-- item.1.6
+	"Galaxy Store",		"Samsungs own Store",							1,	#-- item.1.7
+	"Gallery",		"Samsungs Gallery App",							1,	#-- item.1.8
+	"Kids Mode Installer",	"",									0,	#-- item.1.9
+	"MyFiles",		"Myfiles Application",							1,	#-- item.1.10
+	"Samsung Browser", 	"",									1,	#-- item.1.11
+	"Samsung Music Player",	"",									1,	#-- item.1.12
+	"Samsung Video Player",	"",									1,	#-- item.1.13
+	"SideSync",		"",									1,	#-- item.1.14
+	"SmartManager",		"SmartManager app",							1,	#-- item.1.15
+	"SMS Application",	"Only needed for T805",							1,	#-- item.1.16
+	"SPlanner",		"Planner App and Widget",						1,	#-- item.1.17
+	"SVoice",		"Samsung Voice Assistant",						1,	#-- item.1.18
+	"Weather",		"Weather Widget",							1,	#-- item.1.19
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Books",		"",									0,	#-- item.2.1
 	"Google Chrome",	"",									0,	#-- item.2.2
@@ -349,6 +345,7 @@ checkbox(
 	"Google Newsstand",	"",									0,	#-- item.2.11
 	"Talkback",		"",									0,	#-- item.2.12
 	"Youtube",		"",									0,	#-- item.2.13
+	"Google Movies",	"",									0,	#-- item.2.14
 	"Other Apps",		"",									2,	#-- group 3
 	"Dropbox",		"",									0,	#-- item.3.1
 	"Evernote",		"",									0,	#-- item.3.2

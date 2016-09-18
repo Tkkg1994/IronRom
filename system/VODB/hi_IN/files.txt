@@ -1,0 +1,3 @@
+hi_IN-ak-cur.lite.res	45a33cf8f0319747d4e40b9f10d07174	3310107
+hi_IN.lang	d19d66ab6134d1f17b43b866fc69ad9e	4124
+hi_IN-lk-text.lite.res	aec5b46d4b26b0f0be24e5517a839dc7	4967148

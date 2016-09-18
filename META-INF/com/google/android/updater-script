@@ -1,6 +1,6 @@
 if
-    file_getprop("/tmp/aroma-data/menu.prop","selected") == "1"
-     then
+	file_getprop("/tmp/aroma-data/menu.prop","selected") == "1"
+	then
 		ui_print("Installing IronRom T80X");
 
 assert(getprop("ro.product.device") == "chagalllte" || getprop("ro.build.product") == "chagalllte" || getprop("ro.product.name") == "chagalllte" ||
@@ -19,17 +19,279 @@ ui_print(" ");
 ui_print("Formatting system...");
 ui_print(" ");
 format("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/by-name/SYSTEM", "0", "/system");
-ui_print("Mounting System");
 set_progress(0.100000);
-mount("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/by-name/SYSTEM", "/system");
+ui_print(" ");
+ui_print("Mounting System");
+mount("ext4", "EMMC", "/dev/block/mmcblk0p18", "/system");
 ui_print("Mounting Data");
-mount("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/by-name/USERDATA", "/data");
+mount("ext4", "EMMC", "/dev/block/mmcblk0p21", "/data");
 ui_print("Mounting Cache");
-mount("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/CACHE", "/cache");
+mount("ext4", "EMMC", "/dev/block/mmcblk0p19", "/cache");
 set_progress(0.200000);
 ui_print("Extracting system...");
 ui_print(" ");
 package_extract_dir("system", "/system");
+set_progress(0.400000);
+# Variants
+if
+	file_getprop("/tmp/aroma/variant.prop","variant") == "t800"
+	then
+		ui_print("Installing SM-T800 Variant...");
+		package_extract_dir("iron/variants/SM-T800/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/variant.prop","variant") == "t805"
+	then
+		ui_print("Installing SM-T805 Variant...");
+		package_extract_dir("iron/variants/SM-T805/system", "/system");
+endif;
+#Debloat
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.1") == "1"
+	then
+		ui_print("Installing Allshare...");
+		package_extract_dir("iron/debloat/Allshare", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.2") == "1"
+	then
+		ui_print("Installing ANT...");
+		package_extract_dir("iron/debloat/ANT", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.3") == "1"
+	then
+		ui_print("Installing Calculator...");
+		package_extract_dir("iron/debloat/Calculator", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.4") == "1"
+	then
+		ui_print("Installing Wifi contacts...");
+		package_extract_dir("iron/debloat/Contacts/SM-T800", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.5") == "1"
+	then
+		ui_print("Installing LTE contacts...");
+		package_extract_dir("iron/debloat/Contacts/SM-T805", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.6") == "1"
+	then
+		ui_print("Installing Email app...");
+		package_extract_dir("iron/debloat/Email", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.7") == "1"
+	then
+		ui_print("Installing Galaxy Appstore...");
+		package_extract_dir("iron/debloat/GalaxyApps", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.8") == "1"
+	then
+		ui_print("Installing Gallery...");
+		package_extract_dir("iron/debloat/Gallery", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.9") == "1"
+	then
+		ui_print("Installing Kidsmode...");
+		package_extract_dir("iron/debloat/Kids", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.10") == "1"
+	then
+		ui_print("Installing MyFiles...");
+		package_extract_dir("iron/debloat/Myfiles", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.11") == "1"
+	then
+		ui_print("Installing Samsung Browser...");
+		package_extract_dir("iron/debloat/SamsungBrowser", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.12") == "1"
+	then
+		ui_print("Installing Samsung Music...");
+		package_extract_dir("iron/debloat/SamsungMusic", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.13") == "1"
+	then
+		ui_print("Installing Samsung Video...");
+		package_extract_dir("iron/debloat/SamsungVideo", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.14") == "1"
+	then
+		ui_print("Installing Sidesync...");
+		package_extract_dir("iron/debloat/Sidesync", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.15") == "1"
+	then
+		ui_print("Installing SmartManager...");
+		package_extract_dir("iron/debloat/SmartManager", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.16") == "1"
+	then
+		ui_print("Installing SMS...");
+		package_extract_dir("iron/debloat/SMS", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.17") == "1"
+	then
+		ui_print("Installing SPlanner...");
+		package_extract_dir("iron/debloat/SPlanner", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.18") == "1"
+	then
+		ui_print("Installing SVoice...");
+		package_extract_dir("iron/debloat/SVoice", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.19") == "1"
+	then
+		ui_print("Installing Weather...");
+		package_extract_dir("iron/debloat/Weather", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.1") == "1"
+	then
+		ui_print("Installing Google Books...");
+		package_extract_dir("iron/debloat/Books", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.2") == "1"
+	then
+		ui_print("Installing Google Chrome...");
+		package_extract_dir("iron/debloat/Chrome", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.3") == "1"
+	then
+		ui_print("Installing Google Drive...");
+		package_extract_dir("iron/debloat/Drive", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.4") == "1"
+	then
+		ui_print("Installing Google Games...");
+		package_extract_dir("iron/debloat/Games", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.5") == "1"
+	then
+		ui_print("Installing Google Mail...");
+		package_extract_dir("iron/debloat/Gmail", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.6") == "1"
+	then
+		ui_print("Installing Google Now...");
+		package_extract_dir("iron/debloat/Google", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.7") == "1"
+	then
+		ui_print("Installing Google Plus...");
+		package_extract_dir("iron/debloat/GooglePlus", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.8") == "1"
+	then
+		ui_print("Installing Google Hangouts...");
+		package_extract_dir("iron/debloat/Hangouts", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.9") == "1"
+	then
+		ui_print("Installing Google Maps...");
+		package_extract_dir("iron/debloat/Maps", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.10") == "1"
+	then
+		ui_print("Installing Google Music...");
+		package_extract_dir("iron/debloat/MusicGoogle", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.11") == "1"
+	then
+		ui_print("Installing Google Newsstand...");
+		package_extract_dir("iron/debloat/Newsstand", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.12") == "1"
+	then
+		ui_print("Installing Google Talkback...");
+		package_extract_dir("iron/debloat/Talkback", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.13") == "1"
+	then
+		ui_print("Installing Youtube...");
+		package_extract_dir("iron/debloat/Youtube", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.2.14") == "1"
+	then
+		ui_print("Installing Movies...");
+		package_extract_dir("iron/debloat/Video", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.3.1") == "1"
+	then
+		ui_print("Installing Dropbox...");
+		package_extract_dir("iron/debloat/Dropbox", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.3.2") == "1"
+	then
+		ui_print("Installing Evernote...");
+		package_extract_dir("iron/debloat/Evernote", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.3.3") == "1"
+	then
+		ui_print("Installing Flipboard...");
+		package_extract_dir("iron/debloat/Flipboard", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.3.4") == "1"
+	then
+		ui_print("Installing Hancom Office...");
+		package_extract_dir("iron/debloat/Hancom", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.3.5") == "1"
+	then
+		ui_print("Installing Netflix...");
+		package_extract_dir("iron/debloat/Netflix", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.3.6") == "1"
+	then
+		ui_print("Installing NYTimes...");
+		package_extract_dir("iron/debloat/NYTimes", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.3.7") == "1"
+	then
+		ui_print("Installing Peel Tab...");
+		package_extract_dir("iron/debloat/Peel", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.3.8") == "1"
+	then
+		ui_print("Installing Travel Agent...");
+		package_extract_dir("iron/debloat/Travel", "/system");
+endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
@@ -341,11 +603,108 @@ set_progress(0.700000);
 ui_print(" ");
 ui_print("Extracting boot image...");
 ui_print(" ");
-package_extract_file("boot.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
-set_progress(0.800000);
-#ROOT
+#Kernel
+if
+	file_getprop("/tmp/aroma/variant.prop","kernel") == "stockt800"
+	then
+		ui_print("Installing T800 Stock Kernel...");
+		package_extract_file("iron/kernels/SM-T800/Stock/boot.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
+		set_progress(0.800000);
+endif;
+if
+	file_getprop("/tmp/aroma/variant.prop","kernel") == "stockt805"
+	then
+		ui_print("Installing T805 Stock Kernel...");
+		package_extract_file("iron/kernels/SM-T805/Stock/boot.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
+		set_progress(0.800000);
+endif;
+if
+	file_getprop("/tmp/aroma/variant.prop","kernel") == "ironstockt800"
+	then
+		ui_print("Installing T800 IronStock...");
+		package_extract_file("iron/kernels/SM-T800/IronStock/boot.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
+		set_progress(0.800000);
+endif;
+if
+	file_getprop("/tmp/aroma/variant.prop","kernel") == "ironstockt805"
+	then
+		ui_print("Installing T805 IronStock...");
+		package_extract_file("iron/kernels/SM-T805/IronStock/boot.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
+		set_progress(0.800000);
+endif;
+# Magisk
+if
+	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
+	then
+		package_extract_dir("iron/magisk", "/temp/magisk");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v6.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v6.zip");
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","magisk") == "no"
+	then
+		ui_print("No magisk installed...");
+endif;
+#Root
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
+	then
+		package_extract_dir("iron/supersu", "/tmp/supersu");
+		run_program("/sbin/busybox", "unzip", "/tmp/supersu/SR1-SuperSU-v2.78-SR1.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/SR1-SuperSU-v2.78-SR1.zip");
+		ui_print(" ");
+#SUD
+		set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
+	then
+		package_extract_dir("iron/supersu", "/temp/superuser");
+		run_program("/sbin/busybox", "unzip", "/temp/superuser/phh-superuser-17-magisk.zip", "META-INF/com/google/android/*", "-d", "/temp/superuser");
+		run_program("/sbin/busybox", "sh", "/temp/superuser/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/superuser/phh-superuser-17-magisk.zip");
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "no"
+	then
+		ui_print("No root installed...");
+endif;
+#Busybox
+if
+	file_getprop("/tmp/aroma/magisk.prop","busybox") == "bbn"
+	then
+		package_extract_dir("iron/busybox", "/tmp/busybox");
+		run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
+		run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","busybox") == "bby"
+	then
+		package_extract_dir("iron/busybox", "/temp/busybox");
+		run_program("/sbin/busybox", "unzip", "/temp/busybox/BusyBox-Magisk-1.25.zip", "META-INF/com/google/android/*", "-d", "/temp/busybox");
+		run_program("/sbin/busybox", "sh", "/temp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/busybox/BusyBox-Magisk-1.25.zip");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","busybox") == "no"
+	then
+		ui_print("No busybox installed...");
+endif;
+#Xposed
+if
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "yes"
+	then
+		package_extract_dir("iron/xposed", "/temp/xposed");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.5-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.5-sdk23-systemless.zip");
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "no"
+	then
+		ui_print("No xposed installed...");
+endif;
 ui_print(" ");
-#BUSYBOX
 set_progress(0.900000);
 ui_print("Umounting Partitions");
 unmount("/system");

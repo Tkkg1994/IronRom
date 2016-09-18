@@ -39,8 +39,8 @@
 /system/app/WeatherDaemon2014_MMR_Tablet/WeatherDaemon2014_MMR_Tablet.apk
 /system/app/KnoxFolderContainer/KnoxFolderContainer.apk
 /system/app/EmergencyModeService/EmergencyModeService.apk
-/system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk
 /system/app/Bluetooth/Bluetooth.apk
+/system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk
 /system/app/PickUpTutorial/PickUpTutorial.apk
 /system/app/MobilePrintSvc_Samsung/MobilePrintSvc_Samsung.apk
 /system/app/SecExchange/SecExchange.apk
@@ -65,8 +65,8 @@
 /system/app/KnoxAppsUpdateAgent/KnoxAppsUpdateAgent.apk
 /system/app/EmergencyLauncher/EmergencyLauncher.apk
 /system/app/SecHTMLViewer/SecHTMLViewer.apk
-/system/app/bootagent/bootagent.apk
 /system/app/AllshareMediaServer/AllshareMediaServer.apk
+/system/app/bootagent/bootagent.apk
 /system/app/GearManagerStub/GearManagerStub.apk
 /system/app/AllshareMediaShare/AllshareMediaShare.apk
 /system/app/MyKNOXSetupWizard/MyKNOXSetupWizard.apk
@@ -177,8 +177,8 @@
 /system/priv-app/DeviceTest/DeviceTest.apk
 /system/priv-app/SamsungBilling/SamsungBilling.apk
 /system/priv-app/Telecom/Telecom.apk
-/system/priv-app/SCloudService/SCloudService.apk
 /system/priv-app/SecVideoTablet/SecVideoTablet.apk
+/system/priv-app/SCloudService/SCloudService.apk
 /system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
 /system/priv-app/SNS_v2/SNS_v2.apk
 /system/priv-app/MagazineBriefingWidget/MagazineBriefingWidget.apk
@@ -229,6 +229,7 @@
 /system/priv-app/LogsProvider/LogsProvider.apk
 /system/priv-app/SmartManagerProvider/SmartManagerProvider.apk
 /system/priv-app/CarrierConfig/CarrierConfig.apk
+/system/priv-app/ASKSManager/ASKSManager.apk
 /system/priv-app/FaceProvider/FaceProvider.apk
 /system/priv-app/ResourceManager/ResourceManager.apk
 /system/priv-app/smartfaceservice/smartfaceservice.apk

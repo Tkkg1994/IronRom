@@ -134,8 +134,6 @@ T-Mobile A"TMA
 232103 AT"3 AT
 #
 23403Airtel-Vodafone"ATL-VOD
-$
-23407Cable&Wireless UK"C&W UK
 
 23408BT OnePhone"BTOP
 
@@ -364,8 +362,8 @@ Vivacom BG"Vivacom
 Telenor BG"Telenor
 
 28601TR TURKCELL"TCELL
-!
-28602Vodafone Turkey"VF-TR
+#
+28602Vodafone Türkiye"VF-TR
 
 28603AVEA"AVEA
 
@@ -569,7 +567,7 @@ CoverageCo"CvgCo
 
 312260USACL"USACL
 
-312480	Sagebrush"SGB
+312480Nemont"Nemont
  
 312630
 NetGenuity"NetGenui
@@ -585,12 +583,8 @@ NetGenuity"NetGenui
 334030Movistar"TEMM
 
 33450AT&T"AT&T
-
-334050AT&T"AT&T
 
 33490AT&T"AT&T
-
-334090AT&T"AT&T
 
 338050Digicel"Digicel
 
@@ -1736,6 +1730,8 @@ SO Telesom"Tele
 63704SOMAFONE"SOMAFONE
 
 63730	Som Golis"Golis
+#
+63750Hormuud Telecom"Hormuud
 
 63801	DJ EVATIS"EVATIS
 
@@ -1767,8 +1763,6 @@ MTN-UGANDA"MTN-UG
 Suretelcom"suretel
 
 64122Airtel"Airtel
-'
-64202BDI TEMPO-AFRICELL"TEMPO-AF
 
 64203
 ONATEL BDI"ONATEL
@@ -2014,11 +2008,9 @@ VodaCom-SA"Vodacom
 AeroMobile"AeroMob
 
 90115OnAir"OnAir
-
-90118WMS"WMS
 
 90126TIM@sea"TIM@sea
 
 90145AISatSea"AISatSea
 
-90150EchoStar Mobile"EML$Published TS25 Database 11 July 2016
+90150EchoStar Mobile"EML$Published TS25 Database 25 July 2016

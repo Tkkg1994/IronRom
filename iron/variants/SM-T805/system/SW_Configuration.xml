@@ -1,0 +1,17 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+	<MobileData>
+	<PublicName>SM-T805</PublicName>
+	</MobileData>
+	<CustomerDataSet>
+	<CSCName>T805ODD</CSCName>
+	<CSCVersion>1CPH7</CSCVersion>
+	<NbCustomer>6</NbCustomer>
+	<CustomerData src="/Customer/INU/customer.xml" />
+	<CustomerData src="/Customer/INS/customer.xml" />
+	<CustomerData src="/Customer/NPL/customer.xml" />
+	<CustomerData src="/Customer/SLK/customer.xml" />
+	<CustomerData src="/Customer/TML/customer.xml" />
+	<CustomerData src="/Customer/BNG/customer.xml" />
+	</CustomerDataSet>
+</SW-Configuration>

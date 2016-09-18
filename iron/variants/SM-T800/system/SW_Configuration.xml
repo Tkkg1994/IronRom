@@ -1,0 +1,13 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+	<MobileData>
+	<PublicName>SM-T800</PublicName>
+	</MobileData>
+	<CustomerDataSet>
+	<CSCName>T800ODD</CSCName>
+	<CSCVersion>1CPH7</CSCVersion>
+	<NbCustomer>2</NbCustomer>
+	<CustomerData src="/Customer/INS/customer.xml" />
+	<CustomerData src="/Customer/INU/customer.xml" />
+	</CustomerDataSet>
+</SW-Configuration>

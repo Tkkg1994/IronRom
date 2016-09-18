@@ -1,0 +1,206 @@
+<?xml version= "1.0" encoding= "utf-8"?>
+<OEM>
+	<NXP>
+		<HANDSET_PATH>
+			<LVVE_RX_CONTROL>
+				<comfort_noise_generator>
+					<cng_controlparams value="-90" />		<!-- CNG_ControlParams (-96 ~ -60) -->
+				</comfort_noise_generator>
+			</LVVE_RX_CONTROL>				
+		</HANDSET_PATH>
+		<HEADSET_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</HEADSET_PATH>
+		<SPEAKER_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<dynamic_echo_noise_suppressor>
+					<dens_lowband>
+						<dens_tail_alpha value="18000" />		<!-- DENS_tail_alpha_LB (0 ~ 32767) -->
+						<dens_tail_portion value="15000" />		<!-- DENS_tail_portion_LB         (0 ~ 32767) -->
+						<dens_gamma_e_dt value="448" />		<!-- DENS_gamma_e_dt_LB        (0 ~ 32767) -->
+						<dens_gamma_e_low value="512" />		<!-- DENS_gamma_e_low_LB      (0 ~ 32767) -->
+						<dens_nl_atten value="1024" />		<!-- DENS_NL_atten_LB             (0 ~ 2048) -->
+					</dens_lowband>
+					<dens_highband>
+						<dens_gamma_e_low value="512" />		<!-- DENS_gamma_e_low_HB    (0 ~ 32767) -->
+					</dens_highband>
+					<dens_gamma_e_alpha value="18000" />		<!-- DENS_gamma_e_alpha      (0 ~ 32767) -->
+				</dynamic_echo_noise_suppressor>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</SPEAKER_PATH>
+		<SPEAKER_EXTRA_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<dynamic_echo_noise_suppressor>
+					<dens_lowband>
+						<dens_tail_alpha value="18000" />		<!-- DENS_tail_alpha_LB (0 ~ 32767) -->
+						<dens_tail_portion value="15000" />		<!-- DENS_tail_portion_LB         (0 ~ 32767) -->
+						<dens_gamma_e_dt value="448" />		<!-- DENS_gamma_e_dt_LB        (0 ~ 32767) -->
+						<dens_gamma_e_low value="384" />		<!-- DENS_gamma_e_low_LB      (0 ~ 32767) -->
+						<dens_nl_atten value="1024" />		<!-- DENS_NL_atten_LB             (0 ~ 2048) -->
+					</dens_lowband>
+					<dens_gamma_e_alpha value="18000" />		<!-- DENS_gamma_e_alpha      (0 ~ 32767) -->
+				</dynamic_echo_noise_suppressor>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</SPEAKER_EXTRA_PATH>
+		<SPEAKER_WB_EXTRA_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</SPEAKER_WB_EXTRA_PATH>
+		<BLUETOOTH_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<dynamic_echo_noise_suppressor>
+					<dens_lowband>
+						<dens_gamma_e_high value="768" />		<!-- DENS_gamma_e_high_LB     (0 ~ 32767) -->
+					</dens_lowband>
+				</dynamic_echo_noise_suppressor>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</BLUETOOTH_PATH>
+		<BT_NSEC_OFF_PATH> 
+			<LVVE_RX_CONTROL>
+				<comfort_noise_generator>
+					<cng_controlparams value="-90" />		<!-- CNG_ControlParams (-96 ~ -60) -->
+				</comfort_noise_generator>
+			</LVVE_RX_CONTROL>	
+			<LIFE_VIBES_HANDS_FREE>			
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</BT_NSEC_OFF_PATH>
+		<HEADSET_3P5PI_PATH> 
+			<LVVE_RX_CONTROL>
+				<comfort_noise_generator>
+					<cng_controlparams value="-90" />		<!-- CNG_ControlParams (-96 ~ -60) -->
+				</comfort_noise_generator>
+			</LVVE_RX_CONTROL>	
+			<LIFE_VIBES_HANDS_FREE>			
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</HEADSET_3P5PI_PATH>
+		<HEADSET_VT_PATH>
+			<LIFE_VIBES_HANDS_FREE>			
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</HEADSET_VT_PATH>
+		<SPEAKER_VT_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<dynamic_echo_noise_suppressor>
+					<dens_lowband>
+						<dens_tail_alpha value="18000" />		<!-- DENS_tail_alpha_LB (0 ~ 32767) -->
+						<dens_tail_portion value="15000" />		<!-- DENS_tail_portion_LB         (0 ~ 32767) -->
+						<dens_gamma_e_dt value="448" />		<!-- DENS_gamma_e_dt_LB        (0 ~ 32767) -->
+						<dens_gamma_e_low value="512" />		<!-- DENS_gamma_e_low_LB      (0 ~ 32767) -->
+						<dens_nl_atten value="1024" />		<!-- DENS_NL_atten_LB             (0 ~ 2048) -->
+					</dens_lowband>
+					<dens_gamma_e_alpha value="18000" />		<!-- DENS_gamma_e_alpha      (0 ~ 32767) -->
+				</dynamic_echo_noise_suppressor>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</SPEAKER_VT_PATH>
+		<BLUETOOTH_VT_PATH> 
+			<LVVE_RX_CONTROL>
+				<comfort_noise_generator>
+					<cng_controlparams value="-90" />		<!-- CNG_ControlParams (-96 ~ -60) -->
+				</comfort_noise_generator>
+			</LVVE_RX_CONTROL>	
+			<LIFE_VIBES_HANDS_FREE>
+				<dynamic_echo_noise_suppressor>
+					<dens_lowband>
+						<dens_gamma_e_high value="768" />		<!-- DENS_gamma_e_high_LB     (0 ~ 32767) -->
+					</dens_lowband>
+				</dynamic_echo_noise_suppressor>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</BLUETOOTH_VT_PATH>
+		<BT_NSEC_OFF_VT_PATH> 
+			<LVVE_RX_CONTROL>
+				<comfort_noise_generator>
+					<cng_controlparams value="-90" />		<!-- CNG_ControlParams (-96 ~ -60) -->
+				</comfort_noise_generator>
+			</LVVE_RX_CONTROL>	
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</BT_NSEC_OFF_VT_PATH>
+		<HEADSET_3P5PI_VT_PATH>
+			<LVVE_RX_CONTROL>
+				<comfort_noise_generator>
+					<cng_controlparams value="-90" />		<!-- CNG_ControlParams (-96 ~ -60) -->
+				</comfort_noise_generator>
+			</LVVE_RX_CONTROL>	
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</HEADSET_3P5PI_VT_PATH>
+		<HANDSET_WB_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</HANDSET_WB_PATH>
+		<HEADSET_WB_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</HEADSET_WB_PATH>
+		<SPEAKER_WB_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</SPEAKER_WB_PATH>
+		<BLUETOOTH_WB_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</BLUETOOTH_WB_PATH>
+		<BT_NSEC_OFF_WB_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</BT_NSEC_OFF_WB_PATH>
+		<HEADSET_3P5PI_WB_PATH>
+			<LIFE_VIBES_HANDS_FREE>
+				<patch_change_detector>
+					<pcd_threshold value="3000" />		<!-- PCD_threshold (0~32767) -->
+				</patch_change_detector>
+			</LIFE_VIBES_HANDS_FREE>
+		</HEADSET_3P5PI_WB_PATH>
+	</NXP>
+</OEM>
