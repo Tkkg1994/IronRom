@@ -661,6 +661,14 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
 	then
 		package_extract_dir("iron/supersu", "/temp/superuser");
+		run_program("/sbin/busybox", "unzip", "/temp/superusersuperuser-r242.zip", "META-INF/com/google/android/*", "-d", "/temp/superuser");
+		run_program("/sbin/busybox", "sh", "/temp/superuser/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/superuser/superuser-r242.zip");
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
+	then
+		package_extract_dir("iron/supersu", "/temp/superuser");
 		run_program("/sbin/busybox", "unzip", "/temp/superuser/phh-superuser-17-magisk.zip", "META-INF/com/google/android/*", "-d", "/temp/superuser");
 		run_program("/sbin/busybox", "sh", "/temp/superuser/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/superuser/phh-superuser-17-magisk.zip");
 		ui_print(" ");
