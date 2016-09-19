@@ -424,7 +424,7 @@ form(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"contact",	"Contacts",		"",								"group",
-	"t800",		"SM-T800",		"Will install wifi model contacts,				"select.selected",
+	"t800",		"SM-T800",		"Will install wifi model contacts",				"select.selected",
 	"t805",		"SM-T805",		"Will install lte model contacts",				"select",
 	"no",		"Nothing",		"Don't install samsungs contacts app",				"select",
 	"launcher",	"Launcher", 		"",								"group",
@@ -449,7 +449,11 @@ form(
 	"clock",	"Clock", 		"",								"group",
 	"stock",	"Stock Clock app",	"",								"select",
 	"tabs2",	"Tab S2 Clock",		"Installs Tab S2 Clock Application",				"select",
-	"no",		"Nothing",		"Don't install Myfiles at all",					"select"
+	"no",		"Nothing",		"Don't install Clock at all",					"select",
+	"video",	"Video", 		"",								"group",
+	"stock",	"Stock Video app",	"",								"select",
+	"tabs2",	"Tab S2 Video",		"Installs Tab S2 Video Application",				"select",
+	"no",		"Nothing",		"Don't install Video at all",					"select"
 );
 
 alert( "Alert", "Removing samsung apps can lead to force closes and not working features!");
@@ -479,16 +483,15 @@ checkbox(
 	"Allshare",		"Allshare Cast by Samsung",						1,	#-- item.1.1
 	"ANT",			"ANT-Hal and Plugins",							1,	#-- item.1.2
 	"Calculator",		"",									1,	#-- item.1.3
-	"Galaxy Store",		"Samsungs own Store",							1,	#-- item.1.7
-	"Gallery",		"Samsungs Gallery App",							1,	#-- item.1.8
-	"Kids Mode Installer",	"",									0,	#-- item.1.9
-	"Samsung Browser", 	"",									1,	#-- item.1.11
-	"Samsung Music Player",	"",									1,	#-- item.1.12
-	"Samsung Video Player",	"",									1,	#-- item.1.13
-	"SideSync",		"",									1,	#-- item.1.14
-	"SmartManager",		"SmartManager app",							1,	#-- item.1.15
-	"SMS Application",	"Only needed for T805",							1,	#-- item.1.16
-	"SVoice",		"Samsung Voice Assistant",						1,	#-- item.1.18
+	"Galaxy Store",		"Samsungs own Store",							1,	#-- item.1.4
+	"Gallery",		"Samsungs Gallery App",							1,	#-- item.1.5
+	"Kids Mode Installer",	"",									0,	#-- item.1.6
+	"Samsung Browser", 	"",									1,	#-- item.1.7
+	"Samsung Music Player",	"",									1,	#-- item.1.8
+	"SideSync",		"",									1,	#-- item.1.9
+	"SmartManager",		"SmartManager app",							1,	#-- item.1.10
+	"SMS Application",	"Only needed for T805",							1,	#-- item.1.11
+	"SVoice",		"Samsung Voice Assistant",						1,	#-- item.1.12
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Books",		"",									0,	#-- item.2.1
 	"Google Chrome",	"",									0,	#-- item.2.2

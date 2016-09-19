@@ -194,7 +194,24 @@ endif;
 if
 	file_getprop("/tmp/aroma/tabs2.prop","clock") == "no"
 	then
-		ui_print("No Myfiles installed...");
+		ui_print("No Clock installed...");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","video") == "stock"
+	then
+		ui_print("Installing Tab s video...");
+		package_extract_dir("iron/debloat/SamsungVideo/Tab_S", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","video") == "tabs2"
+	then
+		ui_print("Installing Tab s2 video...");
+		package_extract_dir("iron/debloat/SamsungVideo/Tab_S2", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/tabs2.prop","video") == "no"
+	then
+		ui_print("No Video installed...");
 endif;
 #Debloat
 if
@@ -216,61 +233,55 @@ if
 		package_extract_dir("iron/debloat/Calculator", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.7") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.4") == "1"
 	then
 		ui_print("Installing Galaxy Appstore...");
 		package_extract_dir("iron/debloat/GalaxyApps", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.8") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.5") == "1"
 	then
 		ui_print("Installing Gallery...");
 		package_extract_dir("iron/debloat/Gallery", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.9") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.6") == "1"
 	then
 		ui_print("Installing Kidsmode...");
 		package_extract_dir("iron/debloat/Kids", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.11") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.7") == "1"
 	then
 		ui_print("Installing Samsung Browser...");
 		package_extract_dir("iron/debloat/SamsungBrowser", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.12") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.8") == "1"
 	then
 		ui_print("Installing Samsung Music...");
 		package_extract_dir("iron/debloat/SamsungMusic", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.13") == "1"
-	then
-		ui_print("Installing Samsung Video...");
-		package_extract_dir("iron/debloat/SamsungVideo", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.14") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.9") == "1"
 	then
 		ui_print("Installing Sidesync...");
 		package_extract_dir("iron/debloat/Sidesync", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.15") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.10") == "1"
 	then
 		ui_print("Installing SmartManager...");
 		package_extract_dir("iron/debloat/SmartManager", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.16") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.11") == "1"
 	then
 		ui_print("Installing SMS...");
 		package_extract_dir("iron/debloat/SMS", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.18") == "1"
+	file_getprop("/tmp/aroma/debloat.prop","item.1.12") == "1"
 	then
 		ui_print("Installing SVoice...");
 		package_extract_dir("iron/debloat/SVoice", "/system");
