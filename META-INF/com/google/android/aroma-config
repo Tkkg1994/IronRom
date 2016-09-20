@@ -430,10 +430,6 @@ form(
 	"launcher",	"Launcher", 		"",								"group",
 	"stock",	"Stock Launcher",	"",								"select",
 	"tabs2",	"Tab S2 Launcher",	"Installs Tab S2 launcher",					"select.selected",
-	"weather",	"Weather", 		"",								"group",
-	"stock",	"Stock Weather widget",	"",								"select",
-	"tabs2",	"Tab S2 weather",	"Installs Tab S2 weather widget",				"select",
-	"no",		"Nothing",		"Don't install weather widget at all",				"select",
 	"calendar",	"Calendar", 		"",								"group",
 	"stock",	"Stock Calendar app",	"",								"select",
 	"tabs2",	"Tab S2 Calendar",	"Installs Tab S2 Calendar Application",				"select",
@@ -492,6 +488,7 @@ checkbox(
 	"SmartManager",		"SmartManager app",							1,	#-- item.1.10
 	"SMS Application",	"Only needed for T805",							1,	#-- item.1.11
 	"SVoice",		"Samsung Voice Assistant",						1,	#-- item.1.12
+	"Weather",		"Samsung Weather widget",						1,	#-- item.1.13
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Books",		"",									0,	#-- item.2.1
 	"Google Chrome",	"",									0,	#-- item.2.2

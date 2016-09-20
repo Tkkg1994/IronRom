@@ -112,23 +112,6 @@ if
 		package_extract_dir("iron/launcher/Tab_S2", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/tabs2.prop","weather") == "stock"
-	then
-		ui_print("Installing Tab s weather...");
-		package_extract_dir("iron/debloat/Weather/Tab_S", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/tabs2.prop","weather") == "tabs2"
-	then
-		ui_print("Installing Tab s2 weather...");
-		package_extract_dir("iron/debloat/Weather/Tab_S2", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/tabs2.prop","weather") == "no"
-	then
-		ui_print("No weather installed...");
-endif;
-if
 	file_getprop("/tmp/aroma/tabs2.prop","calendar") == "stock"
 	then
 		ui_print("Installing Tab s calendar...");
@@ -285,6 +268,12 @@ if
 	then
 		ui_print("Installing SVoice...");
 		package_extract_dir("iron/debloat/SVoice", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/debloat.prop","item.1.13") == "1"
+	then
+		ui_print("Installing Weather...");
+		package_extract_dir("iron/debloat/Weather", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/debloat.prop","item.2.1") == "1"
