@@ -393,12 +393,20 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
+	"magisk",	"Magisk",	"",									"group",
+	"yes",		"Yes",		"Will install magisk",							"select.selected",
+	"no",		"No",		"Will not install magisk",						"select",
 	"root",		"Root method", 	"",									"group",
-	"su",		"SuperSU",	"You want to install SuperSU?",						"select",
+	"su",		"SuperSU",	"Will install SuperSU 2.78, NOT compatible with magisk",		"select",
+	"phhma",	"Magisk phh root","Will install phh's superuser which is compatible with magisk",	"select.selected",
 	"no",		"No root",	"Nothing will be installed",						"select",
-	"busybox",	"Busybox", 	"You want to install busybox?",						"group",
-	"bbn",		"Busybox",	"Will install busybox 1.24",						"select",
-	"no",		"No busybox",	"Nothing will be installed",						"select"
+	"busybox",	"Busybox", 	"Choose between magisk or non magisk busybox",				"group",
+	"bbn",		"Busybox without magisk",	"Will install busybox without magisk compatibility",	"select",
+	"bby",		"Busybox with magisk","Will install busybox with magisk compatibility",			"select.selected",
+	"no",		"No busybox",	"Nothing will be installed",						"select",
+	"xposed",	"Xposed",	"",									"group",
+	"yes",		"Xposed",	"Will install xposed V86.5 systemless (ONLY WORKS WITH MAGISK)",	"select.selected",
+	"no",		"No Xposed",	"Nothing will be installed",						"select"
 );
 
 ##
