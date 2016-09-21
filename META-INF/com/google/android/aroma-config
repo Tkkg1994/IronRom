@@ -66,8 +66,8 @@
 # ini_set("dp","1"); #-- LDPI ( 240x320 / QVGA )
 # ini_set("dp","2"); #-- MDPI ( 340x480 / HVGA )
 # ini_set("dp","3"); #-- HDPI ( 480x800 / WVGA )
-# ini_set("dp","4");
-# ini_set("dp","5");
+ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
+# ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 #
 
 ##
@@ -218,7 +218,7 @@ if prop("menu.prop","selected")=="2" then
     #-- Variable Value
       "<@center><b>Your Device System Information</b></@>\n\n"+
       
-      "Device Name\t\t: <#469>Galaxy Tab s</#>\n"+
+      "Device Name\t\t: <#469>Galaxy Tab S</#>\n"+
       "Board Name\t\t: <#469>SM-T800/SM-T805</#>\n"+
       "Manufacturer\t\t: <#469>Samsung</#>\n"+
 	  
@@ -393,20 +393,12 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk",	"",									"group",
-	"yes",		"Yes",		"Will install magisk",							"select.selected",
-	"no",		"No",		"Will not install magisk",						"select",
 	"root",		"Root method", 	"",									"group",
-	"su",		"SuperSU",	"Will install SuperSU 2.78, NOT compatible with magisk",		"select",
-	"phhma",	"Magisk phh root","Will install phh's superuser which is compatible with magisk",	"select.selected",
+	"su",		"SuperSU",	"You want to install SuperSU?",						"select",
 	"no",		"No root",	"Nothing will be installed",						"select",
-	"busybox",	"Busybox", 	"Choose between magisk or non magisk busybox",				"group",
-	"bbn",		"Busybox without magisk",	"Will install busybox without magisk compatibility",	"select",
-	"bby",		"Busybox with magisk","Will install busybox with magisk compatibility",			"select.selected",
-	"no",		"No busybox",	"Nothing will be installed",						"select",
-	"xposed",	"Xposed",	"",									"group",
-	"yes",		"Xposed",	"Will install xposed V86.5 systemless (ONLY WORKS WITH MAGISK)",	"select.selected",
-	"no",		"No Xposed",	"Nothing will be installed",						"select"
+	"busybox",	"Busybox", 	"You want to install busybox?",						"group",
+	"bbn",		"Busybox",	"Will install busybox 1.24",						"select",
+	"no",		"No busybox",	"Nothing will be installed",						"select"
 );
 
 ##
