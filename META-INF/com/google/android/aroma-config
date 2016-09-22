@@ -353,8 +353,8 @@ selectbox(
 #
 
 form(
-    "Kernel/variant",
-    "Choose your kernel and variant here",
+    "Kernel",
+    "Choose your kernel here",
     "@default",
     "variant.prop",
   
@@ -362,9 +362,6 @@ form(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"variant",	"Variant",		"",								"group",
-	"t800",		"SM-T800",		"Will install files for wifi model",				"select.selected",
-	"t805",		"SM-T805",		"Will install files for lte model",				"select",
 	"kernel",	"Kernel", 		"",								"group",
 	"stockt800",	"Stock SM-T800",	"Installs stock kernel for wifi model",				"select",
 	"ironstockt800","IronStock SM-T800",	"Installs IronStock for wifi model",				"select.selected",
