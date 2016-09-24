@@ -99,7 +99,7 @@ ini_set("rom_name",             "IronRom™ ");
 ini_set("rom_version",          "V3.0");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-T800/T805");
-ini_set("rom_date",             "20.09.2016");
+ini_set("rom_date",             "24.09.2016");
 
 
 ##

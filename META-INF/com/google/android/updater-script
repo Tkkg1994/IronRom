@@ -70,25 +70,25 @@ package_extract_dir("system", "/system");
 set_progress(0.400000);
 # Variants
 if
-	file_getprop("/tmp/aroma/variant.prop","variant") == "stockt800"
+	file_getprop("/tmp/aroma/variant.prop","kernel") == "stockt800"
 	then
 		ui_print("Installing SM-T800 Variant...");
 		package_extract_dir("iron/kernels/SM-T800/Stock/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/variant.prop","variant") == "ironstockt800"
+	file_getprop("/tmp/aroma/variant.prop","kernel") == "ironstockt800"
 	then
 		ui_print("Installing SM-T800 Variant...");
 		package_extract_dir("iron/kernels/SM-T800/IronStock/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/variant.prop","variant") == "stockt805"
+	file_getprop("/tmp/aroma/variant.prop","kernel") == "stockt805"
 	then
 		ui_print("Installing SM-T805 Variant...");
 		package_extract_dir("iron/kernels/SM-T805/Stock/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/variant.prop","variant") == "ironstockt805"
+	file_getprop("/tmp/aroma/variant.prop","kernel") == "ironstockt805"
 	then
 		ui_print("Installing SM-T805 Variant...");
 		package_extract_dir("iron/kernels/SM-T805/IronStock/system", "/system");
