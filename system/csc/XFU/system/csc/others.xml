@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SamsungMobileFeauture>
+  <Version>ED0001</Version>
+  <Country>ANGOLA</Country>
+  <CountryISO>AO</CountryISO>
+  <SalesCode>XFU</SalesCode>
+  <FeatureSet>
+    <CscFeature_Setting_IncludeApn4SwUpdate>TRUE</CscFeature_Setting_IncludeApn4SwUpdate>
+    <CscFeature_Framework_ReplaceDataTypeIconAsOpBrand>TFG</CscFeature_Framework_ReplaceDataTypeIconAsOpBrand>
+    <CscFeature_Clock_DisableIsraelCountry>TRUE</CscFeature_Clock_DisableIsraelCountry>
+    <CscFeature_Contact_EnableDynCallerIdMatchingDigitWithAutoSim>TRUE</CscFeature_Contact_EnableDynCallerIdMatchingDigitWithAutoSim>
+    <CscFeature_VoiceCall_EnableBeepVibration4UssdAlert>TRUE</CscFeature_VoiceCall_EnableBeepVibration4UssdAlert>
+    <CscFeature_VoiceCall_EnableDisplaySdnNameDuringCall>TRUE</CscFeature_VoiceCall_EnableDisplaySdnNameDuringCall>
+    <CscFeature_Phone_AddLabelForSimLock>InvalidSIM</CscFeature_Phone_AddLabelForSimLock>
+    <CscFeature_Message_DisableSmscEditable>TRUE</CscFeature_Message_DisableSmscEditable>
+    <CscFeature_Message_CMASOperator>la-tfg</CscFeature_Message_CMASOperator>
+    <CscFeature_Camera_CameraFlicker>60hz</CscFeature_Camera_CameraFlicker>
+    <CscFeature_Music_TranslateUnknownTitle>TRUE</CscFeature_Music_TranslateUnknownTitle>
+    <CscFeature_Web_DisableMostVisitedHomepage>TRUE</CscFeature_Web_DisableMostVisitedHomepage>
+    <CscFeature_Web_SetUAProfile>http://wap.samsungmobile.com/uaprof/%s.xml</CscFeature_Web_SetUAProfile>
+    <CscFeature_Web_EnableAutoBookmarkSetBySim>TRUE</CscFeature_Web_EnableAutoBookmarkSetBySim>
+    <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+    <CscFeature_Web_BookmarkPreloadOnChrome>NONE</CscFeature_Web_BookmarkPreloadOnChrome>
+    <CscFeature_Wifi_UseRandom4digitCombinationAsSSID>TRUE</CscFeature_Wifi_UseRandom4digitCombinationAsSSID>
+    <CscFeature_Wifi_DefaultSsidNPwd>MOVISTAR WIFI</CscFeature_Wifi_DefaultSsidNPwd>
+    <CscFeature_RIL_PDPRetryMechanism4>EBE</CscFeature_RIL_PDPRetryMechanism4>
+    <CscFeature_RIL_EnableTotalCallTime>TRUE</CscFeature_RIL_EnableTotalCallTime>
+    <CscFeature_RIL_EnableCallBlock4TDF>TRUE</CscFeature_RIL_EnableCallBlock4TDF>
+    <CscFeature_RIL_ReplaceImeiSalesCodeAs>TFG</CscFeature_RIL_ReplaceImeiSalesCodeAs>
+    <CscFeature_RIL_DisplaySpnOnlyInCaseSamePlmn>TRUE</CscFeature_RIL_DisplaySpnOnlyInCaseSamePlmn>
+    <CscFeature_RIL_DisableNetworkLock4>CRM</CscFeature_RIL_DisableNetworkLock4>
+    <CscFeature_RIL_CheckNetLockMccOnly4>LTN</CscFeature_RIL_CheckNetLockMccOnly4>
+    <CscFeature_RIL_DisplayStkUssdDialog>TRUE</CscFeature_RIL_DisplayStkUssdDialog>
+    <CscFeature_RIL_EnableLaunchBrowser>TRUE</CscFeature_RIL_EnableLaunchBrowser>
+    <CscFeature_RIL_DefLteStatus>LTN</CscFeature_RIL_DefLteStatus>
+  </FeatureSet>
+</SamsungMobileFeauture>

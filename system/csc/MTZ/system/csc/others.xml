@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SamsungMobileFeauture>
+  <Version>ED0001</Version>
+  <Country>Zambia</Country>
+  <CountryISO>ZM</CountryISO>
+  <SalesCode>MTZ</SalesCode>
+  <FeatureSet>
+    <CscFeature_Setting_IncludeApn4SwUpdate>TRUE</CscFeature_Setting_IncludeApn4SwUpdate>
+  </FeatureSet>
+</SamsungMobileFeauture>

@@ -1,19 +1,0 @@
-<SamsungMobileFeauture>
-
-  <Version>ED001</Version>
-
-  <Country>BANGLADESH</Country>
-
-  <CountryISO>BD</CountryISO>
-
-  <SalesCode>TML</SalesCode>
-  
-  <FeatureSet>
-  
-	<CscFeature_Common_DisablePhoneNumberFormatting>TRUE</CscFeature_Common_DisablePhoneNumberFormatting>
-    <CscFeature_RIL_EnableLaunchBrowser>TRUE</CscFeature_RIL_EnableLaunchBrowser>
-	<CscFeature_Message_ConfigImeiTracker>2221</CscFeature_Message_ConfigImeiTracker>	    <CscFeature_Setting_DisableMenuInternetCallSetting>TRUE</CscFeature_Setting_DisableMenuInternetCallSetting>			<CscFeature_Setting_IncludeApn4SwUpdate>TRUE</CscFeature_Setting_IncludeApn4SwUpdate>		<CscFeature_Wifi_SupportAdvancedMenu>TRUE</CscFeature_Wifi_SupportAdvancedMenu>		<CscFeature_VoiceCall_ConfigOpStyleForNetworkSetting>StopNetworkSearchingOnPause</CscFeature_VoiceCall_ConfigOpStyleForNetworkSetting>
-
-  </FeatureSet>
-
-</SamsungMobileFeauture>

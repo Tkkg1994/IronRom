@@ -51,7 +51,7 @@
 #
 # NOTE: It must be in top most script, or you will got the color flicker
 #
-#ini_set("force_colorspace","argb");
+ini_set("force_colorspace","rgba");
 #
 
 ##
@@ -96,10 +96,10 @@ ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
 # Initializing Rom Information
 #
 ini_set("rom_name",             "IronRom™ ");
-ini_set("rom_version",          "V3.0");
+ini_set("rom_version",          "V3.1");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-T800/T805");
-ini_set("rom_date",             "24.09.2016");
+ini_set("rom_date",             "01.12.2016");
 
 
 ##
@@ -320,10 +320,9 @@ if prop("menu.prop","selected")=="1" then
 ##
 # Variant Form
 #
-
 form(
-    "Kernel",
-    "Choose your kernel here",
+    "Variant",
+    "Choose your variant here",
     "@default",
     "variant.prop",
   
@@ -331,17 +330,75 @@ form(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"kernel",	"Kernel", 		"",								"group",
-	"stockt800",	"Stock SM-T800",	"Installs stock kernel for wifi model",				"select",
-	"ironstockt800","IronStock SM-T800",	"Installs IronStock for wifi model",				"select.selected",
-	"stockt805",	"Stock SM-T805",	"Installs stock kernel for lte model",				"select",
-	"ironstockt805","IronStock SM-T805",	"Installs IronStock for lte model",				"select"
+	"variant",	"Variant/Model selection",		"",					"group",
+	"t800",		"T800",		"I got a SM-T800 Tab S Wifi",				"select.selected",
+	"t805",		"T805",		"I got a SM-T805 Tab S LTE",				"select"
 );
+
+##
+# Wipe Form
+#
+form(
+    "Wipe",
+    "Choose your wipe option here",
+    "@default",
+    "wipe.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"wipe",		"Wipe method",		"",									"group",
+	"full",		"Full Wipe",		"Wipes everything except internal and external SD card",		"select.selected",
+	"clean",	"Clean Install",	"Wipes everything except external SD card",				"select",
+	"dirty",	"Dirty Flash",		"Wipes only system (there will be bugs with this). Can also be used to change settings after clean install!",			"select"
+);
+
+if prop("variant.prop","variant")=="t800" then
+
+##
+# Kernel Form
+#
+form(
+    "Kernel",
+    "Choose your kernel here",
+    "@default",
+    "kernel.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"kernel",	"Kernel T800", 	"",								"group",
+	"stockt800",	"Stock",	"Installs stock kernel for wifi model",				"select",
+	"ironstockt800","IronStock",	"Installs IronStock for wifi model",				"select.selected"
+);
+endif;
+
+if prop("variant.prop","variant")=="t805" then
+
+##
+# Kernel Form
+#
+form(
+    "Kernel",
+    "Choose your kernel here",
+    "@default",
+    "kernel.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"kernel",	"Kernel T805", 	"",								"group",
+	"stockt805",	"Stock",	"Installs stock kernel for LTE model",				"select",
+	"ironstockt805","IronStock",	"Installs IronStock for LTE model",				"select".selected
+);
+endif;
 
 ##
 # Magisk Form
 #
-
 form(
     "Root/Magisk",
     "You can choose many things here, read carefully:",
@@ -360,25 +417,24 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"magisk",	"Magisk",	"",									"group",
-	"yes",		"Yes",		"Will install magisk",							"select.selected",
+	"yes",		"Yes",		"Will install magisk V9",						"select.selected",
 	"no",		"No",		"Will not install magisk",						"select",
 	"root",		"Root method", 	"",									"group",
-	"su",		"SuperSU",	"Will install SuperSU 2.78, NOT compatible with magisk",		"select",
-	"phhma",	"Magisk phh root","Will install phh's superuser which is compatible with magisk",	"select.selected",
+	"su",		"SuperSU",	"Will install SuperSU SR4",						"select",
+	"phhma",	"Magisk phh root","Will install phh's magisk superuser r266-2 version",			"select.selected",
 	"no",		"No root",	"Nothing will be installed",						"select",
 	"busybox",	"Busybox", 	"Choose between magisk or non magisk busybox",				"group",
-	"bbn",		"Busybox without magisk",	"Will install busybox without magisk compatibility",	"select",
-	"bby",		"Busybox with magisk","Will install busybox with magisk compatibility",			"select.selected",
-	"no",		"No busybox",	"Nothing will be installed",						"select",
+	"yes",		"Install busybox","Will install busybox V1.25",						"select",
+	"no",		"No busybox",	"Busybox is already included in MAGISK V9",				"select.selected",
 	"xposed",	"Xposed",	"",									"group",
-	"yes",		"Xposed",	"Will install xposed V86.5 systemless (ONLY WORKS WITH MAGISK)",	"select.selected",
-	"no",		"No Xposed",	"Nothing will be installed",						"select"
+	"xpsma",	"Xposed V87",	"Will install xposed V87 systemless (magisk required)",			"select",
+	"xps",		"Xposed V86.2",	"Last xposed version without magisk",					"select",
+	"no",		"No xposed",	"Xposed won't be installed",						"select.selected"
 );
 
 ##
 # Tab S2 Form
 #
-
 form(
     "Tab S/Tab S2",
     "Choose which apps from tab s or tab s2 to install",
@@ -423,7 +479,6 @@ alert( "Alert", "Removing samsung apps can lead to force closes and not working 
 ##
 # Debloat Checkbox
 #
-
 checkbox(
   #-- Title
 	"Debloating Options",
