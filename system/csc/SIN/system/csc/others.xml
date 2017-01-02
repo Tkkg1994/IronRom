@@ -1,0 +1,38 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<SamsungMobileFeauture>
+  <Version>ED001</Version>
+  <Country>SINGAPORE</Country>
+  <CountryISO>SG</CountryISO>
+  <SalesCode>SIN</SalesCode>
+  <FeatureSet>
+    <CscFeature_Framework_EnableThaiVietReshaping>TRUE</CscFeature_Framework_EnableThaiVietReshaping>
+    <CscFeature_Sip_LangQwertyType4HwKey>HW_KEYBOARD_COUNTRY_TYPE_CHINESE</CscFeature_Sip_LangQwertyType4HwKey>
+    <CscFeature_FMRadio_FrequencySpaceAs>100</CscFeature_FMRadio_FrequencySpaceAs>
+    <CscFeature_FMRadio_DefaultChannelAs>87.5</CscFeature_FMRadio_DefaultChannelAs>
+    <CscFeature_Web_SetUAProfile>http://wap.samsungmobile.com/uaprof/%s.xml</CscFeature_Web_SetUAProfile>
+    <CscFeature_Web_SetHomepageURL>http://myportal.singtel.com</CscFeature_Web_SetHomepageURL>
+    <CscFeature_GMS_SetClientIDBaseMs>android-samsung</CscFeature_GMS_SetClientIDBaseMs>
+    <CscFeature_GMS_SetClientIDBaseGmm>android-samsung</CscFeature_GMS_SetClientIDBaseGmm>
+    <CscFeature_GMS_SetClientIDBaseYt>android-samsung</CscFeature_GMS_SetClientIDBaseYt>
+    <CscFeature_GMS_SetClientIDBaseAm>android-singtel-sg</CscFeature_GMS_SetClientIDBaseAm>
+    <CscFeature_RIL_EnableRoamingIcon4NationalRoaming>TRUE</CscFeature_RIL_EnableRoamingIcon4NationalRoaming>
+    <CscFeature_Setting_CustNetworkSelMenu4>OLB</CscFeature_Setting_CustNetworkSelMenu4>
+    <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+    <CscFeature_RIL_CallerIdMatchingDigit>8</CscFeature_RIL_CallerIdMatchingDigit>
+    <CscFeature_Setting_EnableEditingIpVersionType>TRUE</CscFeature_Setting_EnableEditingIpVersionType>
+    <CscFeature_Common_DisablePhoneNumberFormatting>TRUE</CscFeature_Common_DisablePhoneNumberFormatting>
+	<CscFeature_Common_SupportHuxPermissionPregrant>SIN</CscFeature_Common_SupportHuxPermissionPregrant>
+    <CscFeature_Web_DisableMostVisitedHomepage>TRUE</CscFeature_Web_DisableMostVisitedHomepage>
+    <CscFeature_Setting_IncludeApn4SwUpdate>TRUE</CscFeature_Setting_IncludeApn4SwUpdate>
+    <CscFeature_Contact_ExportToSimPhoneAccountOnly>FALSE</CscFeature_Contact_ExportToSimPhoneAccountOnly>
+    <CscFeature_Video_AddWidgetLayout>true</CscFeature_Video_AddWidgetLayout>
+    <CscFeature_Wifi_RemovableDefaultAP>TRUE</CscFeature_Wifi_RemovableDefaultAP>
+    <CscFeature_Wifi_EapMethodSetting>SIM, SingTel, Singtel WIFI</CscFeature_Wifi_EapMethodSetting>
+    <CscFeature_Wifi_SetCountryInfo>TRUE</CscFeature_Wifi_SetCountryInfo>
+    <CscFeature_RIL_EnableLaunchBrowser>TRUE</CscFeature_RIL_EnableLaunchBrowser>
+    <CscFeature_RIL_DisplayStkUssdDialog>TRUE</CscFeature_RIL_DisplayStkUssdDialog>
+    <CscFeature_Camera_CameraFlicker>50hz</CscFeature_Camera_CameraFlicker>
+    <CscFeature_Contact_IgnoreSpaceDuringSearch>TRUE</CscFeature_Contact_IgnoreSpaceDuringSearch>
+    <CscFeature_Common_Beep4NotiDuringCall>TRUE</CscFeature_Common_Beep4NotiDuringCall>
+  </FeatureSet>
+</SamsungMobileFeauture>

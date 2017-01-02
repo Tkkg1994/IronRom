@@ -1,8 +1,0 @@
-/system/app/Deezer_Music_v5.3.7.38/Deezer_Music_v5.3.7.38.apk
-/system/app/Gameloft_Games_V1.0.1/Gameloft_Games_V1.0.1.apk
-/system/app/My_Vodacom_V8.3.0/My_Vodacom_V8.3.0.apk
-/system/app/Telly_com.telly_2.23.0/Telly_com.telly_2.23.0.apk
-/system/app/Vodacom_Videoplay_V6.0.8/Vodacom_Videoplay_V6.0.8.apk
-/system/app/VodafoneAppStore_V1.4/VodafoneAppStore_V1.4.apk
-/system/priv-app/Vodafone_Start_v5.5.3_Widget/Vodafone_Start_v5.5.3_Widget.apk
-/system/priv-app/Vodafone_Updates_v6.1.0_Samsung_signed/Vodafone_Updates_v6.1.0_Samsung_signed.apk

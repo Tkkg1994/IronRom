@@ -61,8 +61,8 @@
 /system/app/RCPComponents/RCPComponents.apk
 /system/app/DocumentsUI/DocumentsUI.apk
 /system/app/WfdBroker_MUPG/WfdBroker_MUPG.apk
-/system/app/BeaconManager_40/BeaconManager_40.apk
 /system/app/AllshareFileShareClient/AllshareFileShareClient.apk
+/system/app/BeaconManager_40/BeaconManager_40.apk
 /system/app/KnoxAppsUpdateAgent/KnoxAppsUpdateAgent.apk
 /system/app/EmergencyLauncher/EmergencyLauncher.apk
 /system/app/SecHTMLViewer/SecHTMLViewer.apk
@@ -75,9 +75,9 @@
 /system/app/CertInstaller/CertInstaller.apk
 /system/app/SapaMonitor/SapaMonitor.apk
 /system/app/PhotoTable/PhotoTable.apk
+/system/app/AllshareFileShareServer/AllshareFileShareServer.apk
 /system/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk
 /system/app/SCParser/SCParser.apk
-/system/app/AllshareFileShareServer/AllshareFileShareServer.apk
 /system/app/SamsungSans/SamsungSans.apk
 /system/app/BBCAgent/BBCAgent.apk
 /system/app/TaskManager/TaskManager.apk

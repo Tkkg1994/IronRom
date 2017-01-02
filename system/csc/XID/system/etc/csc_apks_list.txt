@@ -1,0 +1,2 @@
+/system/app/SGift_stub/SGift_stub.apk
+/system/app/S_Lime_Stub/S_Lime_Stub.apk

@@ -4,30 +4,18 @@
 	<PublicName>SM-T805</PublicName>
 	</MobileData>
 	<CustomerDataSet>
-	<CSCName>T805OJV</CSCName>
-	<CSCVersion>1CPJ2</CSCVersion>
-	<NbCustomer>22</NbCustomer>
-	<CustomerData src="/Customer/XSG/customer.xml" />
-	<CustomerData src="/Customer/ACR/customer.xml" />
-	<CustomerData src="/Customer/AFR/customer.xml" />
-	<CustomerData src="/Customer/ECT/customer.xml" />
-	<CustomerData src="/Customer/EGY/customer.xml" />
-	<CustomerData src="/Customer/KSA/customer.xml" />
-	<CustomerData src="/Customer/LEB/customer.xml" />
-	<CustomerData src="/Customer/LYS/customer.xml" />
-	<CustomerData src="/Customer/MAT/customer.xml" />
-	<CustomerData src="/Customer/MRU/customer.xml" />
-	<CustomerData src="/Customer/MTZ/customer.xml" />
-	<CustomerData src="/Customer/MWD/customer.xml" />
-	<CustomerData src="/Customer/THR/customer.xml" />
-	<CustomerData src="/Customer/TMC/customer.xml" />
-	<CustomerData src="/Customer/TUN/customer.xml" />
-	<CustomerData src="/Customer/WTL/customer.xml" />
-	<CustomerData src="/Customer/XFA/customer.xml" />
-	<CustomerData src="/Customer/XFM/customer.xml" />
-	<CustomerData src="/Customer/XFU/customer.xml" />
-	<CustomerData src="/Customer/XFV/customer.xml" />
-	<CustomerData src="/Customer/BTC/customer.xml" />
-	<CustomerData src="/Customer/PAK/customer.xml" />
+	<CSCName>T805OLB</CSCName>
+	<CSCVersion>1CPK2</CSCVersion>
+	<NbCustomer>10</NbCustomer>
+	<CustomerData src="/Customer/CAM/customer.xml" />
+	<CustomerData src="/Customer/MM1/customer.xml" />
+	<CustomerData src="/Customer/SIN/customer.xml" />
+	<CustomerData src="/Customer/STH/customer.xml" />
+	<CustomerData src="/Customer/XME/customer.xml" />
+	<CustomerData src="/Customer/XSP/customer.xml" />
+	<CustomerData src="/Customer/THL/customer.xml" />
+	<CustomerData src="/Customer/XSE/customer.xml" />
+	<CustomerData src="/Customer/XXV/customer.xml" />
+	<CustomerData src="/Customer/XID/customer.xml" />
 	</CustomerDataSet>
 </SW-Configuration>

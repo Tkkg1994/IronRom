@@ -21,36 +21,47 @@
     <home>
 
         <!-- screen [0] -->
-        <!-- Magazine Widget SPlanner -->
+        <!-- SPlanner widget -->
         <magazinewidget
             launcher:packageName="com.sec.android.widgetapp.SPlannerAppWidget" 
             launcher:className="com.sec.android.widgetapp.SPlannerAppWidget.MagazineWidget.MagazineAppWidgetProvider" 
             launcher:screen="0" 
             launcher:x="0" 
             launcher:y="0" 
-            launcher:spanX="4" 
-            launcher:spanY="2" />
-
-
-        <!-- Magazine Widget Email -->
-        <magazinewidget
-            launcher:packageName="com.android.email" 
-            launcher:className="com.android.email.provider.WidgetProvider" 
-            launcher:screen="0" 
-            launcher:x="4" 
-            launcher:y="0" 
             launcher:spanX="2" 
             launcher:spanY="4" />
 
 
-        <!-- Hancome Office Magazine widget -->
+        <!-- Email widget -->
         <magazinewidget
-            launcher:packageName="com.hancom.androidpc.appwidget" 
-            launcher:className="com.hancom.androidpc.appwidget.RecentDocsMagazineWidgetProvider" 
+            launcher:packageName="com.android.email" 
+            launcher:className="com.android.email.provider.WidgetProvider" 
             launcher:screen="0" 
-            launcher:x="0" 
-            launcher:y="2" 
+            launcher:x="2" 
+            launcher:y="0" 
             launcher:spanX="4" 
+            launcher:spanY="2" />		
+
+
+        <!-- Gallery widget -->
+        <magazinewidget
+            launcher:packageName="com.sec.android.gallery3d" 
+            launcher:className="com.sec.android.gallery3d.gadget.MagazineWidgetProvider" 
+            launcher:screen="0" 
+            launcher:x="2" 
+            launcher:y="2" 
+            launcher:spanX="2" 
+            launcher:spanY="2" />
+
+
+		<!-- Music widget -->
+        <magazinewidget
+            launcher:packageName="com.sec.android.app.music" 
+            launcher:className="com.samsung.musicplus.appwidget.magazine.MusicMagazineAppWidgetProvider" 
+            launcher:screen="0" 
+            launcher:x="4" 
+            launcher:y="2" 
+            launcher:spanX="2" 
             launcher:spanY="2" />
 
 
@@ -194,17 +205,9 @@
             <favorite
                 launcher:screen="10" 
                 launcher:packageName="com.google.android.apps.plus" 
-                launcher:className="com.google.android.apps.plus.phone.ConversationListActivity" />
-            <favorite
-				launcher:screen="11" 
-                launcher:className="com.google.android.apps.photos.home.HomeActivity"
-                launcher:packageName="com.google.android.apps.photos"/>
-            <favorite
-                launcher:screen="12" 
-                launcher:packageName="com.google.android.apps.plus" 
                 launcher:className="com.google.android.apps.plus.phone.PhotosLegacyLauncherActivity" />
             <favorite
-                launcher:screen="13" 
+                launcher:screen="11" 
                 launcher:packageName="com.google.android.talk" 
                 launcher:className="com.google.android.talk.SigningInActivity" />
         </folder> 
@@ -317,10 +320,10 @@
             launcher:spanY="3" />
 
 
-        <!-- WebEx -->
+        <!-- Email -->
         <favorite
-            launcher:packageName="com.cisco.webex.meetings" 
-            launcher:className="com.cisco.webex.meetings.ui.premeeting.welcome.WebExMeeting" 
+            launcher:packageName="com.android.email" 
+            launcher:className="com.android.email.activity.Welcome" 
             launcher:screen="3" 
             launcher:x="0" 
             launcher:y="5" 
@@ -328,10 +331,10 @@
             launcher:spanY="1" />
 
 
-        <!-- Remote PC -->
+        <!-- Camera -->
         <favorite
-            launcher:packageName="RemotePC.AndroidViewer.samsung" 
-            launcher:className="rsupport.AndroidViewer.Welcome.WelcomeActivity" 
+            launcher:packageName="com.sec.android.app.camera" 
+            launcher:className="com.sec.android.app.camera.Camera" 
             launcher:screen="3" 
             launcher:x="1" 
             launcher:y="5" 
@@ -394,11 +397,10 @@
             launcher:spanY="1" />
             
             
-        <!-- Kids Widget -->
-        <appwidget
-            launcher:packageName="com.sec.kidsplat.installer" 
-            launcher:className="com.sec.kidsplat.installer.KidsModeInstallerWidget" 
-            launcher:packageName_replacement="next"
+        <!-- Kids mode -->
+        <favorite
+            launcher:packageName="com.sec.android.app.kidshome" 
+            launcher:className="com.sec.android.app.kidshome.KidsHomeStartActivity" 
             launcher:screen="3" 
             launcher:x="7" 
             launcher:y="5" 

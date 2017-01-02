@@ -1,0 +1,6 @@
+/system/app/Galaxy_Rewards_Pro27062016/Galaxy_Rewards_Pro27062016.apk
+/system/app/MySingtel_v4.2/MySingtel_v4.2.apk
+/system/app/SGift_stub/SGift_stub.apk
+/system/app/S_Lime_Stub/S_Lime_Stub.apk
+/system/app/Stub_GalaxyGift-release-preload-20160817_1448_6_0_0/Stub_GalaxyGift-release-preload-20160817_1448_6_0_0.apk
+/system/priv-app/Ignite-Singtel_1.7.306_releaseProduction/Ignite-Singtel_1.7.306_releaseProduction.apk

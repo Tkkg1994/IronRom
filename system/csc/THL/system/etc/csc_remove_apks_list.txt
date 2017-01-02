@@ -1,0 +1,5 @@
+/system/app/MySingtel_v4.2/MySingtel_v4.2.apk
+/system/app/QuaTangGalaxy_stub/QuaTangGalaxy_stub.apk
+/system/app/SGift_stub/SGift_stub.apk
+/system/app/S_Lime_Stub/S_Lime_Stub.apk
+/system/priv-app/Ignite-Singtel_1.7.306_releaseProduction/Ignite-Singtel_1.7.306_releaseProduction.apk
