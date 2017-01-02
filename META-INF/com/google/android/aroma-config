@@ -1,106 +1,20 @@
-﻿### LICENSE:
-#
-# Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-### FILE INFO:
-#
-# AROMA Installer 2.70 - AROMA Installer Test Script Configuration
-#       (c) 2011-2012 by Ahmad Amarullah
-#           amarullz - xda-developers
-#           http://www.amarullz.com/
-#
-#       Binary Version  : 3.00
-#       Binary Codename : Flamboyan
-#
-### INFO:
-#
-# * AROMA Resource Dir  = META-INF/com/google/android/aroma
-#
-# * AROMA Temporary Dir = /tmp/aroma/
-#
-# * About Icon          = @alert - show <AROMA Resource Dir>/icons/alert.png
-#                         or if theme used it will find <themedir>/icon.alert.png
-#                         you can still access it via "icons/alert"
-#
-# * dp                  = Device Pixelate. WVGA/QHD = 3, HVGA = 2.
-#                         dp calculated with = round(min(width,height) / 160)
-#
-###
-
 ##
 # Fix Colorspace Issue
-#
-# For device which have a problem with color ( not display the correct color )
-# try to set "force_colorspace" with ini_set. It may caused by wrong framebuffer
-# information that passed by kernel into framebuffer device.
-#
 # You can use one of following values:
 #   "rgba", "abgr", "argb", "bgra"
-#
-# NOTE: It must be in top most script, or you will got the color flicker
-#
+
 ini_set("force_colorspace","rgba");
-#
 
 ##
-# Forcing Device Pixelate Size
-#  defaut: floor( min( width, height ) / 160 )
-#
-# Usefull for tablet device, if interface was too big, you can
-# force dp size for smaller UI size.
-#
-#-------- Uncomment one of this to use custom dp size:
-#
-# ini_set("dp","1"); #-- LDPI ( 240x320 / QVGA )
-# ini_set("dp","2"); #-- MDPI ( 340x480 / HVGA )
-# ini_set("dp","3"); #-- HDPI ( 480x800 / WVGA )
-ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
-# ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
+# Initializing Information
 #
 
-##
-# Custom Key Code - Usefull For Some Device which not used
-#                   Standard key code for up/down/select/back/menu
-#
-# You can capture the keycode in
-# recovery using "aroma-keycapture-flashable.zip" Available in
-# AROMA Installer Thread.
-#
-# Press some key when it run, it will return key code,
-# that key can override up/down/select/back/menu actions in
-# AROMA Installer, you can even set your home key for up, or
-# volume down for select item
-#
-#-------- Uncomment & Modify this Code:
-#
-# ini_set("customkeycode_up",     "115");
-# ini_set("customkeycode_down",   "114");
-# ini_set("customkeycode_select", "116");
-# ini_set("customkeycode_menu",   "229");
-# ini_set("customkeycode_back",   "158");
-#
-
-##
-# Initializing Rom Information
-#
 ini_set("rom_name",             "IronRom™ ");
-ini_set("rom_version",          "V3.1");
+ini_set("rom_version",          "V3.2");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-T800/T805");
-ini_set("rom_date",             "01.12.2016");
-
+ini_set("rom_date",             "03.01.2017");
+ini_set("dp","4");
 
 ##
 # Show Simple Splash
@@ -120,6 +34,10 @@ splash(
 fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
 theme("miui4");
 
+##
+# SET LANGUAGE & FONT FAMILY
+#
+
 loadlang("langs/en.lang");
 fontresload( "0", "ttf/Roboto-Regular.ttf", "12" ); #-- "0" = Small Font ( Look at Fonts & UNICODE Demo Below )
 fontresload( "1", "ttf/Roboto-Regular.ttf", "18" ); #-- "1" = Big Font
@@ -127,77 +45,75 @@ fontresload( "1", "ttf/Roboto-Regular.ttf", "18" ); #-- "1" = Big Font
 ##
 #   SHOW ROM/Mod INFORMATION
 #
-
 viewbox(
-  #-- Title
-    "<~welcome.title>",
-  
-  #-- Text
-    "<~welcome.text1> <b>"+
-	  #-- Get Config Value
-	  ini_get("rom_name")+
-	"</b> <~common.for> <b>"+ini_get("rom_device")+"</b>.\n\n"+
-    
-    "<~welcome.text2>\n\n"+
-	
-      "  <~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
-      "  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+	#-- Title
+	"<~welcome.title>",
 
-    "<~welcome.next>",
-  
-  #-- Icon
-    "@welcome"
+ 	#-- Text
+	"<~welcome.text1> <b>"+
+	#-- Get Config Value
+	ini_get("rom_name")+
+	"</b> <~common.for> <b>"+ini_get("rom_device")+"</b>.\n\n"+
+
+	"<~welcome.text2>\n\n"+
+	
+	"  <~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
+	"  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+
+	"<~welcome.next>",
+
+	#-- Icon
+	"@welcome"
 );
 
+##
+# LICENSE
+#
 
-###################################################################################################################
-#
-# STEP 3 - LICENSE
-#
 agreebox(
-  #-- Title
-    "IronRom™",
-  
-  #-- Subtitle / Description
-    "Read Carefully",
-  
-  #-- Icon:
-    "@license",
-  
-  #-- Text Content 
-    resread("license.txt"),
-  
-  #-- Checkbox Text
-    "Have you really read it and are agree?",
-  
-  #-- Unchecked Alert Message
-    "You've to agree!"
+	#-- Title
+	"IronRom™",
+
+	#-- Subtitle / Description
+	"Read Carefully",
+
+	#-- Icon:
+	"@license",
+
+	#-- Text Content 
+	resread("license.txt"),
+
+	#-- Checkbox Text
+	"Have you really read it and are agree?",
+
+	#-- Unchecked Alert Message
+	"You've to agree!"
 );
 
 ##
 # MAIN MENU- INSTALLER n MISC
 #
 menubox(
-  #-- Title
-    "IronRom™ Menu",
-  
-  #-- Sub Title
-    "Please select from the Menu Below to Modify the required features",
-  
-  #-- Icon
-    "@apps",
-    
-  #-- Will be saved in /tmp/aroma/menu.prop
-    "menu.prop",
+	#-- Title
+	"IronRom™ Menu",
+
+	#-- Sub Title
+	"Please select from the Menu Below to Modify the required features",
+
+	#-- Icon
+	"@apps",
+ 
+	#-- Will be saved in /tmp/aroma/menu.prop
+	"menu.prop",
     
      #-------------------------+-----------------[ Menubox Items ]-------------------------+---------------#
      # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
      #-------------------------+-----------------------------------------------------------+---------------#	
 	
-	"Installation",		"ROM Installation with Various Features - RECOMMENDED",      "@install",      #-- selected = 1
-	"System Info",		"Get and show device/partition informations",                "@info",         #-- selected = 2
-	"ChangeLog",		"IronRom ChangeLog",                                         "@agreement",    #-- selected = 3
-	"Quit Install",		"Leaving the Aroma setup to install another Rom :(",     "@install"       #-- selected = 4
+	"Installation",		"ROM Installation with Various Features - RECOMMENDED",		"@install",      #-- selected = 1
+	"System Info",		"Get and show device/partition informations",			"@info",         #-- selected = 2
+	"ChangeLog",		"IronRom ChangeLog",						"@agreement",    #-- selected = 3
+	"Quit Install",		"Leaving the Aroma setup to install another Rom :(",		"@install"       #-- selected = 4
 
 );
 
@@ -207,62 +123,62 @@ menubox(
 
 if prop("menu.prop","selected")=="2" then
 
-  #-- Show Please Wait
-  pleasewait("Getting System Information...");
+	#-- Show Please Wait
+	pleasewait("Getting System Information...");
 
-  #-- Fetch System Information
-  setvar(
-    #-- Variable Name
-      "sysinfo",
-    
-    #-- Variable Value
-      "<@center><b>Your Device System Information</b></@>\n\n"+
-      
-      "Device Name\t\t: <#469>Galaxy Tab S</#>\n"+
-      "Board Name\t\t: <#469>SM-T800/SM-T805</#>\n"+
-      "Manufacturer\t\t: <#469>Samsung</#>\n"+
-	  
-	  "\n"+
-	  
-      "System Size\t\t: <b><#selectbg_g>"+getdisksize("/system","m")+" MB</#></b>\n"+
-        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/system","m")+" MB</#></b>\n\n"+
-      "Data Size\t\t: <b><#selectbg_g>"+getdisksize("/data","m")+" MB</#></b>\n"+
-        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/data","m")+" MB</#></b>\n\n"+
-      "SDCard Size\t\t: <b><#selectbg_g>"+getdisksize("/sdcard","m")+" MB</#></b>\n"+
-        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/sdcard","m")+" MB</#></b>\n\n"+
+	#-- Fetch System Information
+	setvar(
+		#-- Variable Name
+		"sysinfo",
 
-      ""
-  );
+		#-- Variable Value
+		"<@center><b>Your Device System Information</b></@>\n\n"+
+
+		"Device Name\t\t: <#ff0000>Galaxy Tab S Wifi/LTE</#>\n"+
+		"Board Name\t\t: <#ff0000>SM-T800/T805</#>\n"+
+		"Manufacturer\t\t: <#ff0000>Samsung</#>\n"+
+	  
+		"\n"+
+
+		"System Size\t\t: <b><#selectbg_g>"+getdisksize("/system","m")+" MB</#></b>\n"+
+		"\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/system","m")+" MB</#></b>\n\n"+
+		"Data Size\t\t: <b><#selectbg_g>"+getdisksize("/data","m")+" MB</#></b>\n"+
+		"\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/data","m")+" MB</#></b>\n\n"+
+		"SDCard Size\t\t: <b><#selectbg_g>"+getdisksize("/sdcard","m")+" MB</#></b>\n"+
+		"\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/sdcard","m")+" MB</#></b>\n\n"+
+
+		""
+	);
   
-  #-- Show Textbox
-  textbox(
-    #-- Title
-      "System Information",
+	#-- Show Textbox
+	textbox(
+		#-- Title
+		"System Information",
     
-    #-- Subtitle
-      "Current system Information on your Tab S",
+		#-- Subtitle
+		"Current system Information on your Tab S",
     
-    #-- Icon
-      "@info",
+		#-- Icon
+		"@info",
     
-    #-- Text
-      getvar("sysinfo")
-  );
+		#-- Text
+		getvar("sysinfo")
+	);
   
-  #-- Show Alert
-  alert(
-    #-- Alert Title
-      "Finished",
+	#-- Show Alert
+	alert(
+		#-- Alert Title
+		"Finished",
     
-    #-- Alert Text
-      "You will be back to Menu",
+		#-- Alert Text
+		"You will be back to Menu",
     
-    #-- Alert Icon
-      "@alert"
-  );
+		#-- Alert Icon
+		"@alert"
+	);
   
-  #-- Back to Menu ( 2 Wizard UI to Back )
-  back("2");
+	#-- Back to Menu ( 2 Wizard UI to Back )
+	back("2");
   
 endif;
 
@@ -272,18 +188,18 @@ endif;
 
 if prop("menu.prop","selected")=="3" then
 
-    #-- TextDialog 
- textdialog(
-    #-- Title
-    "IronRom Changelog",
-	#-- Text
-    resread("changelog.txt"),
-    #-- Custom OK Button Text (Optional)
-    "Close"
- );
+	#-- TextDialog 
+	textdialog(
+		#-- Title
+		"IronRom Changelog",
+		#-- Text
+		resread("changelog.txt"),
+		#-- Custom OK Button Text (Optional)
+		"Close"
+	);
  
-  #-- Back to Menu ( 2 Wizard UI to Back )
-  back("1");
+	#-- Back to Menu ( 2 Wizard UI to Back )
+	back("1");
   
 endif;
 
@@ -294,20 +210,18 @@ endif;
 if prop("menu.prop","selected")=="4" then
 
 #-- Exit
-	if
-	  confirm(
+	if confirm(
 		#-- Title
-		  "Exit",
+		"Exit",
 		#-- Text
-		  "Are you sure want to exit the Installer?",
+		"Are you sure want to exit the Installer?",
 		#-- Icon (Optional)
-		  "@alert"
-	  )=="yes"
+		"@alert"
+	)=="yes"
 	then
-	  #-- Exit 
-	  exit("");
+		#-- Exit 
+		exit("");
 	endif;
-
 endif;
 
 
@@ -318,87 +232,63 @@ endif;
 if prop("menu.prop","selected")=="1" then
 
 ##
-# Variant Form
-#
-form(
-    "Variant",
-    "Choose your variant here",
-    "@default",
-    "variant.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"variant",	"Variant/Model selection",		"",					"group",
-	"t800",		"T800",		"I got a SM-T800 Tab S Wifi",				"select.selected",
-	"t805",		"T805",		"I got a SM-T805 Tab S LTE",				"select"
-);
-
-##
 # Wipe Form
 #
+
 form(
     "Wipe",
     "Choose your wipe option here",
     "@default",
     "wipe.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
 	"wipe",		"Wipe method",		"",									"group",
 	"full",		"Full Wipe",		"Wipes everything except internal and external SD card",		"select.selected",
 	"clean",	"Clean Install",	"Wipes everything except external SD card",				"select",
 	"dirty",	"Dirty Flash",		"Wipes only system (there will be bugs with this). Can also be used to change settings after clean install!",			"select"
 );
 
-if prop("variant.prop","variant")=="t800" then
-
 ##
 # Kernel Form
 #
+
 form(
     "Kernel",
     "Choose your kernel here",
     "@default",
     "kernel.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
 
-	"kernel",	"Kernel T800", 	"",								"group",
-	"stockt800",	"Stock",	"Installs stock kernel for wifi model",				"select",
-	"ironstockt800","IronStock",	"Installs IronStock for wifi model",				"select.selected"
+	"kernel",	"Kernel Selection", 	"",						"group",
+	"stock",	"Stock",	"Installs stock kernel",				"select",
+	"ironstock",	"IronStock",	"Installs IronStock",					"select.selected"
 );
-endif;
-
-if prop("variant.prop","variant")=="t805" then
-
-##
-# Kernel Form
-#
-form(
-    "Kernel",
-    "Choose your kernel here",
-    "@default",
-    "kernel.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"kernel",	"Kernel T805", 	"",								"group",
-	"stockt805",	"Stock",	"Installs stock kernel for LTE model",				"select",
-	"ironstockt805","IronStock",	"Installs IronStock for LTE model",				"select.selected"
-);
-endif;
 
 ##
 # Magisk Form
 #
+
 form(
     "Root/Magisk",
     "You can choose many things here, read carefully:",
@@ -416,25 +306,27 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk",	"",									"group",
-	"yes",		"Yes",		"Will install magisk V9",						"select.selected",
-	"no",		"No",		"Will not install magisk",						"select",
-	"root",		"Root method", 	"",									"group",
-	"su",		"SuperSU",	"Will install SuperSU SR5",						"select",
-	"phhma",	"Magisk phh root","Will install phh's magisk superuser r266-2 version",			"select.selected",
-	"no",		"No root",	"Nothing will be installed",						"select",
-	"busybox",	"Busybox", 	"Choose between magisk or non magisk busybox",				"group",
-	"yes",		"Install busybox","Will install busybox V1.25",						"select",
-	"no",		"No busybox",	"Busybox is already included in MAGISK V9",				"select.selected",
-	"xposed",	"Xposed",	"",									"group",
-	"xpsma",	"Xposed V87",	"Will install xposed V87 systemless (magisk required)",			"select",
-	"xps",		"Xposed V86.2",	"Last xposed version without magisk",					"select",
-	"no",		"No xposed",	"Xposed won't be installed",						"select.selected"
+	"magisk",	"Magisk V9",		"",									"group",
+	"yes",		"Yes",			"Magisk V9 and its modules for systemless mods",			"select.selected",
+	"no",		"No",			"Won't install magisk",							"select",
+	"root",		"Root method", 		"",									"group",
+	"su",		"SuperSU 2.79 SR1",	"Will install SuperSU 2.79 SR1",					"select",
+	"phhma",	"Phh's r266-2 magisk",	"Installs phh's supersuser patched for magisk!",			"select.selected",
+	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select",
+	"no",		"No root",		"No root will be installed",						"select",
+	"busybox",	"Busybox", 		"",									"group",
+	"yes",		"Busybox",		"Will install latest busybox available",				"select.selected",
+	"no",		"No busybox",		"Busybox is already included in Magisk V9",				"select",
+	"xposed",	"Xposed",		"",									"group",
+	"xpsma",	"Xposed V87.1",		"Will install xposed V87.1 systemless (magisk required)",		"select",
+	"xpssu",	"Xposed V86.2",		"Last xposed version without magisk (SuperSU required)",		"select",
+	"no",		"No xposed",		"Xposed won't be installed",						"select.selected"
 );
 
 ##
 # Tab S2 Form
 #
+
 form(
     "Tab S/Tab S2",
     "Choose which apps from tab s or tab s2 to install",
@@ -445,10 +337,6 @@ form(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"contact",	"Contacts",		"",								"group",
-	"t800",		"SM-T800",		"Will install wifi model contacts",				"select.selected",
-	"t805",		"SM-T805",		"Will install lte model contacts",				"select",
-	"no",		"Nothing",		"Don't install samsungs contacts app",				"select",
 	"launcher",	"Launcher", 		"",								"group",
 	"stock",	"Stock Launcher",	"",								"select",
 	"tabs2",	"Tab S2 Launcher",	"Installs Tab S2 launcher",					"select.selected",
@@ -474,20 +362,50 @@ form(
 	"no",		"Nothing",		"Don't install Video at all",					"select"
 );
 
-alert( "Alert", "Removing samsung apps can lead to force closes and not working features!");
+##
+# Modem Form
+#
+
+form(
+    "Modem and Bootloader",
+    "You want to auto update your modem and bootloader?",
+    "@default",
+    "cpandbl.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"modem",	"Modem update SM-T805",		"",										"group",
+	"update",	"Update Modem",		"Will auto update your modem to latest CPH7 modem on T805 device.",			"select",
+	"keep",		"Keep current Modem",	"Will keep your current modem and change nothing. Wifi only devices don't have a modem!",	"select.selected",
+	"bootloader",	"Bootloader update SM-T800/T805",	"",									"group",
+	"update",	"Update Bootloader",	"Will auto update your BL to latest release on T800/T805. Table will auto reboot!",	"select",
+	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select.selected"
+);
+
+alert( "Attention", "Removing samsung apps can lead to force closes and not working features!");
 
 ##
 # Debloat Checkbox
 #
+
 checkbox(
   #-- Title
 	"Debloating Options",
 	  
   #-- Sub Title
-    "You can debloat the rom here, what you don't want, don't select it",
+    "You can debloat the rom here. Everything what is ticked will be installed!",
 	  
   #-- Icon:
-     "icons/install",
+     "@default",
 	 
   #-- Will be saved in /tmp/aroma/debloat.prop
 	"debloat.prop",
@@ -545,17 +463,17 @@ ini_set("text_next", "Install Now");
 ini_set("icon_next", "@installbutton");
   
 viewbox(
-  #-- Title
-    "Ready to Install",
+	#-- Title
+	"Ready to Install",
 
-  #-- Text
-    "IronRom is ready to be installed.\n\n"+
+	#-- Text
+	"IronRom is ready to be installed.\n\n"+
 	"Press <b>Install ROM</b> to begin the installation.\n\n"+
 	"To review or change any of your installation settings, press <b>Back</b>.\n\n"+
 	"Press Menu -> Quit Installation to quit.",
 
-  #-- Icon
-    "@install"
+	#-- Icon
+	"@install"
 );
 
 endif;
@@ -564,18 +482,17 @@ endif;
 # INSTALLATION PROCESS
 #
 
-if prop("menu.prop","selected")== "1" 
-then
+if prop("menu.prop","selected")== "1" then
 
 ini_set("text_next", "Next");
 ini_set("icon_next", "@next");
 
 install(
-  "IronRom™ Installation",
-  getvar("rom_name") + "\n" +
-  "Please wait while IronRom is conquering your Tab S" +
-  "",
-  "icons/install"
+	"IronRom™ Installation",
+	getvar("rom_name") + "\n" +
+	"Please wait while IronRom is conquering your tablet" +
+	"",
+	"icons/install"
 );
 
 ini_set("text_next", "Finish");

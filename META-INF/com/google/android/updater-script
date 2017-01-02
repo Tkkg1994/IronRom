@@ -6,13 +6,15 @@ if
 assert(getprop("ro.product.device") == "chagalllte" || getprop("ro.build.product") == "chagalllte" || getprop("ro.product.name") == "chagalllte" ||
 	getprop("ro.product.device") == "chagallwifi" || getprop("ro.build.product") == "chagallwifi" || getprop("ro.product.name") == "chagallwifi" ||
 	abort("This package is for \"chagalllte,chagallwifi\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
+ifelse(is_mounted("/system"), unmount("/system"));
+ifelse(is_mounted("/cache"), unmount("/cache"));
+ifelse(is_mounted("/data"), unmount("/data"));
 show_progress(1.000000, 0);
-unmount("/system");
-unmount("/cache");
-unmount("/data");
 ui_print(" ");
 ui_print(" ");
-ui_print("IronRom Installer V3.1");
+ui_print(" ");
+ui_print("IronRom Installer V3.2");
+ui_print(" ");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
@@ -23,6 +25,7 @@ format("ext4", "EMMC", "/dev/block/platform/dw_mmc.0/by-name/SYSTEM", "0", "/sys
 set_progress(0.100000);
 ui_print(" ");
 ui_print("Mounting system");
+ui_print(" ");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p18", "/system");
 ui_print("Mounting data");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p21", "/data");
@@ -35,11 +38,13 @@ if
 	then
 		ui_print("Full wipe...");
 		delete_recursive("/system");
+		delete_recursive("/cache");
 		package_extract_file("iron/scripts/DeleteDataWithoutMedia.sh", "/tmp/DeleteDataWithoutMedia.sh"); 
 		set_perm(0, 0, 0777, "/tmp/DeleteDataWithoutMedia.sh");
 		run_program("/sbin/busybox", "sh", "/tmp/DeleteDataWithoutMedia.sh");
 		delete_recursive("/magisk");
 		delete_recursive("/supersu");
+		delete_recursive("/su");
 		set_progress(0.250000);
 endif;	
 if
@@ -47,10 +52,11 @@ if
 	then
 		ui_print("Clean install...");
 		delete_recursive("/system");
+		delete_recursive("/cache");
 		delete_recursive("/data");
-		delete_recursive("/sdcard");
 		delete_recursive("/magisk");
 		delete_recursive("/supersu");
+		delete_recursive("/su");
 		set_progress(0.250000);
 endif;
 if
@@ -58,43 +64,39 @@ if
 	then
 		ui_print("Dirty flash...");
 		delete_recursive("/system");
+		delete_recursive("/cache");
 		set_progress(0.250000);
 endif;
 ui_print("Extracting system...");
 ui_print(" ");
+set_progress(0.275000);
 package_extract_dir("system", "/system");
-set_progress(0.400000);
-# Variants
-if
-	file_getprop("/tmp/aroma/variant.prop","variant") == "t800"
-	then
-		ui_print("Installing SM-T800 Variant...");
-		package_extract_dir("iron/variant/SM-T800/system", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/variant.prop","variant") == "t805"
-	then
-		ui_print("Installing SM-T805 Variant...");
-		package_extract_dir("iron/variant/SM-T805/system", "/system");
-endif;
+set_progress(0.300000);
+#-- Variants
+ifelse(
+	is_substring("T800", getprop("ro.boot.bootloader")),
+		(
+			ui_print("Installing SM-T800 Variant...");
+			package_extract_dir("iron/variant/SM-T800/system", "/system");
+		),
+		(
+			ui_print("Installing SM-T805 Variant...");
+			package_extract_dir("iron/variant/SM-T805/system", "/system");
+		)
+);
+#-- Contacts
+ifelse(
+	is_substring("T800", getprop("ro.boot.bootloader")),
+		(
+			ui_print("SM-T800 contacts...");
+			package_extract_dir("iron/debloat/Contacts/SM-T800", "/system");
+		),
+		(
+			ui_print("SM-T805 contacts...");
+			package_extract_dir("iron/debloat/Contacts/SM-T805", "/system");
+		)
+);
 #Tab S/S2
-if
-	file_getprop("/tmp/aroma/tabs2.prop","contact") == "t800"
-	then
-		ui_print("Installing Wifi contacts...");
-		package_extract_dir("iron/debloat/Contacts/SM-T800", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/tabs2.prop","contact") == "t805"
-	then
-		ui_print("Installing LTE contacts...");
-		package_extract_dir("iron/debloat/Contacts/SM-T805", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/tabs2.prop","contact") == "no"
-	then
-		ui_print("No contacts installed...");
-endif;
 if
 	file_getprop("/tmp/aroma/tabs2.prop","launcher") == "stock"
 	then
@@ -407,12 +409,14 @@ endif;
 ui_print("Extracting data...");
 ui_print(" ");
 package_extract_dir("data", "/data");
+#-- Busybox App
 if
 	file_getprop("/tmp/aroma/magisk.prop","busybox") == "yes"
 	then
 		ui_print("Installing Busybox App...");
 		package_extract_dir("iron/busybox/app", "/data/app");
 endif;
+#-- Phh's App
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
@@ -420,28 +424,35 @@ if
 		package_extract_dir("iron/root/app", "/data/app");
 endif;
 if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
+	then
+		ui_print("Installing Phh's App...");
+		package_extract_dir("iron/root/app", "/data/app");
+endif;
+#-- Xposed App
+if
 	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
 	then
 		ui_print("Installing Xposed App...");
 		package_extract_dir("iron/xposed/app", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xps"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpssu"
 	then
 		ui_print("Installing Xposed App...");
 		package_extract_dir("iron/xposed/app", "/data/app");
 endif;
+#-- Magisk App
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
 		ui_print("Installing Magiks App...");
 		package_extract_dir("iron/magisk/app", "/data/app");
 endif;
-set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644);
-set_progress(0.500000);
+set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
+set_progress(0.400000);
 ui_print("Creating symlinks...");
 ui_print(" ");
-#SYM
 symlink("app_process32", "/system/bin/app_process");
 symlink("dalvikvm32", "/system/bin/dalvikvm");
 symlink("grep", "/system/bin/egrep");
@@ -605,10 +616,9 @@ symlink("toybox", "/system/bin/whoami");
 symlink("toybox", "/system/bin/xargs");
 symlink("toybox", "/system/bin/yes");
 symlink("/vendor/lib/egl/libGLES_mali.so", "/system/vendor/lib/libOpenCL.so.1.1");
-set_progress(0.600000);
+set_progress(0.500000);
 ui_print("Setting Permissions...");
 ui_print(" ");
-#PERM
 set_metadata_recursive("/system", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/bin", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/bin/androidshmservice", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:androidshmservice_exec:s0");
@@ -741,123 +751,240 @@ set_metadata("/system/bin/mlexe", "selabel", "u:object_r:mlexe_exec:s0");
 set_metadata("/system/bin/reactived", "selabel", "u:object_r:actlmand_exec:s0");
 set_metadata("/system/bin/resize2fs", "selabel", "u:object_r:fsck_exec:s0");
 set_metadata("/system/lib/drm", "selabel", "u:object_r:drm_lib_system_file:s0");
-set_progress(0.700000);
+set_progress(0.600000);
 ui_print(" ");
 ui_print("Extracting boot image...");
 ui_print(" ");
-#Kernel
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "stockt800"
-	then
-		ui_print("Installing T800 Stock Kernel...");
-		package_extract_file("iron/kernel/stockt800.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
-		set_progress(0.800000);
-endif;
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "stockt805"
-	then
-		ui_print("Installing T805 Stock Kernel...");
-		package_extract_file("iron/kernel/stockt805.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
-		set_progress(0.800000);
-endif;
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "ironstockt800"
-	then
-		ui_print("Installing T800 IronStock...");
-		package_extract_file("iron/kernel/ironstockt800.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
-		set_progress(0.800000);
-endif;
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "ironstockt805"
-	then
-		ui_print("Installing T805 IronStock...");
-		package_extract_file("iron/kernel/ironstockt805.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
-		set_progress(0.800000);
-endif;
-#SuperSU
+#-- Kernel Selection
+ifelse(
+	is_substring("T800", getprop("ro.boot.bootloader")),
+		(
+			if
+				file_getprop("/tmp/aroma/kernel.prop","kernel") == "stock"
+				then
+					ui_print("Installing T800 Stock Kernel...");
+					package_extract_file("iron/kernel/stockt800.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
+					set_progress(0.650000);
+					ui_print(" ");
+			endif;
+			if
+				file_getprop("/tmp/aroma/kernel.prop","kernel") == "ironstock"
+				then
+					ui_print("Installing T800 IronStock...");
+					package_extract_file("iron/kernel/ironstockt800.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
+					set_progress(0.650000);
+					ui_print(" ");
+			endif;
+		),
+		(
+			if
+				file_getprop("/tmp/aroma/kernel.prop","kernel") == "stock"
+				then
+					ui_print("Installing T805 Stock Kernel...");
+					package_extract_file("iron/kernel/stockt805.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
+					set_progress(0.650000);
+					ui_print(" ");
+			endif;
+			if
+				file_getprop("/tmp/aroma/kernel.prop","kernel") == "ironstock"
+				then
+					ui_print("Installing T805 IronStock...");
+					package_extract_file("iron/kernel/ironstockt805.img", "/dev/block/platform/dw_mmc.0/by-name/BOOT");
+					set_progress(0.650000);
+					ui_print(" ");
+			endif;
+		)
+);
+set_progress(0.700000);
+#-- SuperSU
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
 	then
+		ui_print("Installing SuperSU V2.79 SR1 variant...");
 		package_extract_dir("iron/root", "/tmp/root");
 		run_program("/sbin/busybox", "unzip", "/tmp/root/SuperSU-v2.79-SR1.zip", "META-INF/com/google/android/*", "-d", "/tmp/root");
 		run_program("/sbin/busybox", "sh", "/tmp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/root/SuperSU-v2.79-SR1.zip");
-		ui_print(" ");
 #SUD
 		set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+		set_progress(0.750000);
+		ui_print(" ");
 endif;
-#Magisk
+#-- Magisk
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
+		ui_print("Installing Magisk V9 for systemless mods...");
 		package_extract_dir("iron/magisk", "/temp/magisk");
 		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v9.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
 		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v9.zip");
+		set_progress(0.800000);
 		ui_print(" ");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "no"
 	then
 		ui_print("No magisk installed...");
+		set_progress(0.800000);
+		ui_print(" ");
 endif;
-#Phh
+#-- Root
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
+		ui_print("Installing Magisk phh's root r266-2...");
 		package_extract_dir("iron/root", "/temp/root");
 		run_program("/sbin/busybox", "unzip", "/temp/root/phh-superuser-magisk-r266-2.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
 		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/phh-superuser-magisk-r266-2.zip");
+		set_progress(0.850000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
+	then
+		ui_print("Installing phh's root r275...");
+		package_extract_dir("iron/root", "/temp/root");
+		run_program("/sbin/busybox", "unzip", "/temp/root/superuser-r275.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
+		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/superuser-r275.zip");
+		set_progress(0.850000);
 		ui_print(" ");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "no"
 	then
-		ui_print("No root installed...");
+		ui_print("No root installed");
+		set_progress(0.850000);
+		ui_print(" ");
 endif;
-#Busybox
+#-- Busybox
 if
 	file_getprop("/tmp/aroma/magisk.prop","busybox") == "yes"
 	then
+		ui_print("Installing Busybox...");
 		package_extract_dir("iron/busybox", "/tmp/busybox");
 		run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.25.1-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
 		run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.25.1-ALL-signed.zip");
+		set_progress(0.900000);
+		ui_print(" ");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","busybox") == "no"
 	then
-		ui_print("No busybox installed...");
-endif;
-#Xposed
-if
-	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
-	then
-		package_extract_dir("iron/xposed", "/temp/xposed");
-		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v87.1-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
-		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v87.1-sdk23-systemless.zip");
+		ui_print("No Busybox installed...");
+		set_progress(0.900000);
 		ui_print(" ");
 endif;
+#-- Xposed
 if
-	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xps"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpssu"
 	then
+		ui_print("Installing Xposed V86.2 systemless...");
 		package_extract_dir("iron/xposed", "/temp/xposed");
 		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
 		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip");
+		set_progress(0.975000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
+	then
+		ui_print("Installing Xposed V87.1 systemless...");
+		package_extract_dir("iron/xposed", "/temp/xposed");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v87.1-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v87.1-sdk23-systemless.zip");
+		set_progress(0.975000);
 		ui_print(" ");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","xposed") == "no"
 	then
-		ui_print("No Xposed installed...");
+		ui_print("No Xposed installed");
+		set_progress(0.975000);
+		ui_print(" ");
+endif;
+#-- Modem
+if
+	file_getprop("/tmp/aroma/cpandbl.prop","modem") == "update"
+	then
+		ifelse(
+			is_substring("T805", getprop("ro.boot.bootloader")),
+				(
+					ui_print(" ");
+					ui_print("Flashing latest CPH7 SM-T805 Modem");
+					assert(package_extract_file("iron/modem/T805/modem.bin", "/dev/block/mmcblk0p13"));
+					ui_print(" ");
+				),
+				(
+					ui_print(" ");
+					ui_print("You don't have a SM-T805 device. Please check your compatibility!");
+					ui_print(" ");
+
+				)
+		);
+endif;
+if
+	file_getprop("/tmp/aroma/cpandbl.prop","modem") == "keep"
+	then
+		ui_print("Don't update Modem");
 endif;
 ui_print(" ");
+ui_print("Wiping dalvik and tmp");
+ui_print(" ");
 delete_recursive("/temp");
-delete_recursive("/cache");
 delete_recursive("/data/dalvik-cache");
-set_progress(0.900000);
 ui_print("Umounting Partitions");
 unmount("/system");
-unmount("/cache");
 unmount("/data");
+unmount("/cache");
 set_progress(1.000000);
+ui_print(" ");
+ui_print("IronRom Installed");
+ui_print(" ");
 endif;
-ui_print("IronRom installed");
+#-- Bootloader
+if
+	file_getprop("/tmp/aroma/cpandbl.prop","bootloader") == "update"
+	then
+		ifelse(
+			is_substring("T800", getprop("ro.boot.bootloader")),
+				(
+					ui_print(" ");
+					ui_print("Flashing latest CPK7 SM-T800 BL");
+					assert(package_extract_file("iron/bootloader/T800/sboot.bin", "/dev/block/mmcblk0p1"));
+					sleep(1);
+					assert(package_extract_file("iron/bootloader/T800/param.bin", "/dev/block/mmcblk0p8"));
+					sleep(1);
+					ui_print(" ");
+					run_program("/sbin/reboot", "fota_bl");
+				),
+				(
+				ifelse(
+					is_substring("T805", getprop("ro.boot.bootloader")),
+						(
+							ui_print(" ");
+							ui_print("Flashing latest CPK2 SM-T805 BL");
+							assert(package_extract_file("iron/bootloader/T805/sboot.bin", "/dev/block/mmcblk0p1"));
+							sleep(1);
+							assert(package_extract_file("iron/bootloader/T805/param.bin", "/dev/block/mmcblk0p8"));
+							sleep(1);
+							ui_print(" ");
+							run_program("/sbin/reboot", "fota_bl");
+						),
+						(
+
+							ui_print(" ");
+							ui_print("You don't have a T800/T805 model, please manually update via Odin!");
+							ui_print(" ");
+
+						)
+				);
+				)
+		);
+endif;
+if
+	file_getprop("/tmp/aroma/cpandbl.prop","bootloader") == "keep"
+	then
+		ui_print(" ");
+		ui_print("Don't update the Bootloader");
+		ui_print(" ");
+endif;
 ui_print("Please Reboot now");
