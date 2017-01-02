@@ -779,8 +779,8 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
 	then
 		package_extract_dir("iron/root", "/tmp/root");
-		run_program("/sbin/busybox", "unzip", "/tmp/root/SuperSU-v2.78-SR5.zip", "META-INF/com/google/android/*", "-d", "/tmp/root");
-		run_program("/sbin/busybox", "sh", "/tmp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/root/SuperSU-v2.78-SR5.zip");
+		run_program("/sbin/busybox", "unzip", "/tmp/root/SuperSU-v2.79-SR1.zip", "META-INF/com/google/android/*", "-d", "/tmp/root");
+		run_program("/sbin/busybox", "sh", "/tmp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/root/SuperSU-v2.79-SR1.zip");
 		ui_print(" ");
 #SUD
 		set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -831,8 +831,8 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
 	then
 		package_extract_dir("iron/xposed", "/temp/xposed");
-		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v87.0-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
-		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v87.0-sdk23-systemless.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v87.1-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v87.1-sdk23-systemless.zip");
 		ui_print(" ");
 endif;
 if
