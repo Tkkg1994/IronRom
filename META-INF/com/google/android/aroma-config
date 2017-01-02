@@ -392,7 +392,7 @@ form(
 
 	"kernel",	"Kernel T805", 	"",								"group",
 	"stockt805",	"Stock",	"Installs stock kernel for LTE model",				"select",
-	"ironstockt805","IronStock",	"Installs IronStock for LTE model",				"select".selected
+	"ironstockt805","IronStock",	"Installs IronStock for LTE model",				"select.selected"
 );
 endif;
 
@@ -420,7 +420,7 @@ form(
 	"yes",		"Yes",		"Will install magisk V9",						"select.selected",
 	"no",		"No",		"Will not install magisk",						"select",
 	"root",		"Root method", 	"",									"group",
-	"su",		"SuperSU",	"Will install SuperSU SR4",						"select",
+	"su",		"SuperSU",	"Will install SuperSU SR5",						"select",
 	"phhma",	"Magisk phh root","Will install phh's magisk superuser r266-2 version",			"select.selected",
 	"no",		"No root",	"Nothing will be installed",						"select",
 	"busybox",	"Busybox", 	"Choose between magisk or non magisk busybox",				"group",
