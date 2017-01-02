@@ -45,6 +45,10 @@ if
 		delete_recursive("/magisk");
 		delete_recursive("/supersu");
 		delete_recursive("/su");
+		package_extract_dir("iron/magisk", "/temp/magisk");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-uninstaller.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-uninstaller.zip");
+		ui_print(" ");
 		set_progress(0.250000);
 endif;	
 if
@@ -57,6 +61,9 @@ if
 		delete_recursive("/magisk");
 		delete_recursive("/supersu");
 		delete_recursive("/su");
+		package_extract_dir("iron/magisk", "/temp/magisk");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-uninstaller.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-uninstaller.zip");
 		set_progress(0.250000);
 endif;
 if
@@ -813,10 +820,10 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
-		ui_print("Installing Magisk V9 for systemless mods...");
+		ui_print("Installing Magisk V10 for systemless mods...");
 		package_extract_dir("iron/magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v9.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v9.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v10.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v10.zip");
 		set_progress(0.800000);
 		ui_print(" ");
 endif;

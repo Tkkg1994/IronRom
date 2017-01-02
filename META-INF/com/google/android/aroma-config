@@ -306,8 +306,8 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk V9",		"",									"group",
-	"yes",		"Yes",			"Magisk V9 and its modules for systemless mods",			"select.selected",
+	"magisk",	"Magisk V10",		"",									"group",
+	"yes",		"Yes",			"Magisk V10 and its modules for systemless mods",			"select.selected",
 	"no",		"No",			"Won't install magisk",							"select",
 	"root",		"Root method", 		"",									"group",
 	"su",		"SuperSU 2.79 SR1",	"Will install SuperSU 2.79 SR1",					"select",
