@@ -306,17 +306,17 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk V10",		"",									"group",
-	"yes",		"Yes",			"Magisk V10 and its modules for systemless mods",			"select.selected",
+	"magisk",	"Magisk V10.2",		"",									"group",
+	"yes",		"Yes",			"Magisk V10.2 and its modules for systemless mods",			"select.selected",
 	"no",		"No",			"Won't install magisk",							"select",
 	"root",		"Root method", 		"",									"group",
 	"su",		"SuperSU 2.79 SR1",	"Will install SuperSU 2.79 SR1",					"select",
-	"phhma",	"Phh's r266-2 magisk",	"Installs phh's supersuser patched for magisk!",			"select.selected",
-	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select",
+	"phhma",	"Phh's r2 topjohwu",	"Installs phh's supersuser patched for magisk",				"select",
+	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select.selected",
 	"no",		"No root",		"No root will be installed",						"select",
 	"busybox",	"Busybox", 		"",									"group",
 	"yes",		"Busybox",		"Will install latest busybox available",				"select.selected",
-	"no",		"No busybox",		"Busybox is already included in Magisk V9",				"select",
+	"no",		"No busybox",		"Busybox is already included in Magisk V10.2",				"select",
 	"xposed",	"Xposed",		"",									"group",
 	"xpsma",	"Xposed V87.1",		"Will install xposed V87.1 systemless (magisk required)",		"select",
 	"xpssu",	"Xposed V86.2",		"Last xposed version without magisk (SuperSU required)",		"select",

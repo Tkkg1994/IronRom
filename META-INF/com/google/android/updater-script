@@ -820,10 +820,10 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
-		ui_print("Installing Magisk V10 for systemless mods...");
+		ui_print("Installing Magisk V10.2 for systemless mods...");
 		package_extract_dir("iron/magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v10.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v10.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v10.2.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v10.2.zip");
 		set_progress(0.800000);
 		ui_print(" ");
 endif;
@@ -838,10 +838,10 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
-		ui_print("Installing Magisk phh's root r266-2...");
+		ui_print("Installing Magisk phh's r2 by topjohnwu...");
 		package_extract_dir("iron/root", "/temp/root");
-		run_program("/sbin/busybox", "unzip", "/temp/root/phh-superuser-magisk-r266-2.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
-		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/phh-superuser-magisk-r266-2.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/root/phh-superuser-topjohnwu-r2.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
+		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/phh-superuser-topjohnwu-r2.zip");
 		set_progress(0.850000);
 		ui_print(" ");
 endif;
